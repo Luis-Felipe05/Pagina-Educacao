@@ -1,0 +1,1435 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TI Dicas para Escola </title>
+    <link rel="shortcut icon" href="" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="tema-inicio">
+
+    <!-- CABEÇALHO --> 
+    <div id="componente-header"></div>
+
+    <!-- Inicio / Capa -->
+    <section class="hero">
+        <div class="hero-container">
+            <h1><i class="fa-solid fa-globe"></i> Central de Suporte Tecnológico</h1>
+            <p>Acesso rápido a manuais, ramais telefônicos e sistemas da rede municipal de ensino.</p>
+        </div>
+    </section>
+
+    <div class="card-area">
+    
+        <div class="card"> 
+            <h2><i class="fa-solid fa-chalkboard-user" ></i> Impressora</h3>
+            <p>• Guia de Impressoras</p>
+            <a href="#manuais" onclick="acessarPeloCard(event, 'hp-432')">Acessar Guia </a>
+        </div>
+
+        <div class="card">
+            
+            <h2><i class="fa-solid fa-briefcase"></i> Câmeras</h3>
+            
+            <p>• Câmeras</p>
+            <a href="#manuais" onclick="acessarPeloCard(event, 'simnext')">Acessar Guia </a>
+        </div>
+
+        <div class="card">
+            <h2><i class="fa-solid fa-list-check"></i> 1Doc</h3>
+            <p>• Tutoriais do Sistema</p>
+            
+            <a href="#manuais" onclick="acessarPeloCard(event, 'refiltinta')">Acessar Guia </a>
+        </div>
+
+    </div>
+
+    <!-- Ramais -->
+    <section class="fundo">
+        
+        <div class="caixa">
+
+            <div class="barras-decorativas">
+                <span></span>
+                
+            </div>
+
+            <div class="titulo">
+                <h2>Lista de Ramais</h2>
+                <p>Atalhos para serviços mais procurados</p>
+            </div>
+        
+        <!-- Barra de Pesquisa -->
+        <div class="search-container">
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                <input autocomplete="off" type="text" id="searchInput" onkeyup="filtrarRamais()" placeholder="Pesquise por nome, setor ou escola...">
+            </div>
+        </div>
+
+        </div>
+    </section>   
+
+    <!-- Ramais -->
+    <section class="fundo">
+        <div class="container">
+        <div class="caixa">
+        <!-- Barra de Categoria -->
+        <div class="barra">
+            <button class="barra-btn active" onclick="abrirTab(event, 'tab-secretaria')">
+                <i class="fa-solid fa-folder-open"></i> Secretaria
+            </button>
+            <button class="barra-btn" onclick="abrirTab(event, 'tab-cem')">
+                <i class="fa-solid fa-book-journal-whills"></i> CEM
+            </button>
+            <button class="barra-btn" onclick="abrirTab(event, 'tab-emei')">
+                <i class="fa-solid fa-puzzle-piece"></i> CEMEI/EMEI
+            </button>
+            <button class="barra-btn" onclick="abrirTab(event, 'tab-outros')">
+                <i class="fa-solid fa-map-location-dot"></i> Outros
+            </button>
+        </div>
+        </div>
+
+    <div id="tab-secretaria" class="tab-content active-content">
+    
+    <div class="grupo-setor">
+        <h3 class="setor-titulo">Secretaria da Educação</h3>
+        <p class="contador">Carregando contatos...</p>
+
+        <div class="sub-grupo">
+            <h4 class="titulo-interno"><i class="fa-solid fa-phone"></i> Telefonista & Recepção</h4>
+            <div class="grid-ramais">
+                <div class="cards" data-search="Eliane">
+                    <div class="info"><h4>Eliane</h4><span>Telefonista</span></div>
+                    <a class="number">9750 / 9751</a>
+                </div>
+                <div class="cards" data-search="Neia">
+                    <div class="info"><h4>Neia</h4><span>Recepção</span></div>
+                    <a class="number">9782</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="sub-grupo">
+            <h4 class="titulo-interno"><i class="fa-solid fa-pen-nib"></i> Gabinete</h4>
+            <div class="grid-ramais-3">
+
+                <div class="cards" data-search="Silvia">
+                    <div class="info"><h4>Silvia</h4><span>Gabinete</span></div>
+                    <a  class="number">9753</a>
+                </div>
+
+                <div class="cards" data-search="Jemima">
+                    <div class="info"><h4>Jemima</h4><span>Gabinete</span></div>
+                    <a class="number">9754</a>
+                </div>
+
+                <div class="cards" data-search="Luciana">
+                    <div class="info"><h4>Luciana</h4><span>Gabinete</span></div>
+                    <a class="number">9776</a>
+                </div>
+
+                <div class="cards" data-search="Marcelo A">
+                    <div class="info"><h4>Marcelo A.</h4><span>Gabinete</span></div>
+                    <a class="number">9804</a>
+                </div>
+
+                <div class="cards" data-search="Kelly">
+                    <div class="info"><h4>Kelly</h4><span>Gabinete</span></div>
+                    <a class="number">9810</a>
+                </div>
+
+                <div class="cards" data-search="Patrícia">
+                    <div class="info"><h4>Patrícia</h4><span>Gabinete</span></div>
+                    <a class="number">9811</a>
+                </div>
+
+                <div class="cards" data-search="Lucas">
+                    <div class="info"><h4>Lucas</h4><span>Gabinete</span></div>
+                    <a class="number">9800</a>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="sub-grupo">
+            <h4 class="titulo-interno"><i class="fa-solid fa-magnifying-glass"></i> Supervisão</h4>
+            <div class="grid-ramais-3">
+
+                <div class="cards" data-search="Meiriane">
+                    <div class="info"><h4>Meiriane</h4><span>Supervisão</span></div>
+                    <a  class="number">9784</a>
+                </div>
+
+                <div class="cards" data-search="Marcelo">
+                    <div class="info"><h4>Marcelo</h4><span>Supervisão</span></div>
+                    <a class="number">9757</a>
+                </div>
+
+                <div class="cards" data-search="Bete">
+                    <div class="info"><h4>Bete</h4><span>Supervisão</span></div>
+                    <a  class="number">9758</a>
+                </div>
+
+                <div class="cards" data-search="Simone">
+                    <div class="info"><h4>Simone</h4><span>Supervisão</span></div>
+                    <a class="number">9759</a>
+                </div>
+
+            </div>
+        </div>
+        
+        <div class="sub-grupo">
+            <h4 class="titulo-interno"><i class="fa-solid fa-utensils"></i> Alimentação Escolar</h4>
+            <div class="grid-ramais-3">
+
+                <div class="cards" data-search="Jéssica">
+                    <div class="info"><h4>Jéssica</h4><span>Alimentação</span></div>
+                    <a  class="number">9760</a>
+                </div>
+
+                <div class="cards" data-search="Juliana">
+                    <div class="info"><h4>Juliana</h4><span>Alimentação</span></div>
+                    <a  class="number">9760</a>
+                </div>
+
+                <div class="cards" data-search="Gabriela">
+                    <div class="info"><h4>Gabriela</h4><span>Alimentação</span></div>
+                    <a  class="number">9760</a>
+                </div>
+
+                <div class="cards" data-search="Ana Lúcia">
+                    <div class="info"><h4>Ana Lúcia</h4><span>Alimentação</span></div>
+                    <a  class="number">9760</a>
+                </div>
+
+            </div>
+        </div>
+        
+        <div class="sub-grupo">
+            <h4 class="titulo-interno"><i class="fa-solid fa-book-open"></i> Pedagógico</h4>
+            <div class="grid-ramais-3">
+
+                <div class="cards" data-search="Thaty Melo">
+                    <div class="info"><h4>Thaty Melo</h4><span>Pedagógico</span></div>
+                    <a  class="number">9767</a>
+                </div>
+
+                <div class="cards" data-search="Fabiana P.">
+                    <div class="info"><h4>Fabiana P.</h4><span>Pedagógico</span></div>
+                    <a  class="number">9769</a>
+                </div>
+
+                <div class="cards" data-search="Fernanda">
+                    <div class="info"><h4>Fernanda M.</h4><span>Pedagógico</span></div>
+                    <a  class="number">9773</a>
+                </div>
+
+                <div class="cards" data-search="Lanusse">
+                    <div class="info"><h4>Lanusse</h4><span>Pedagógico</span></div>
+                    <a  class="number">9772</a>
+                </div>
+
+            </div>
+        </div>
+        
+        <div class="sub-grupo">
+            <h4 class="titulo-interno"><i class="fa-solid fa-coins"></i> Contabilidade & Patrimônio</h4>
+            <div class="grid-ramais-3">
+
+                <div class="cards" data-search="Giuliano Júnior">
+                    <div class="info"><h4>Giuliano e Júnior</h4><span>Contabilidade</span></div>
+                    <a  class="number">9799</a>
+                </div>
+
+                <div class="cards" data-search="Chico">
+                    <div class="info"><h4>Chico</h4><span>Manutenção</span></div>
+                    <a  class="number">9795</a>
+                </div>
+
+                <div class="cards" data-search="Tatiane">
+                    <div class="info"><h4>Tatiane</h4><span>Manutenção</span></div>
+                    <a class="number">9807</a>
+                </div>
+
+                <div class="cards" data-search="Vitor">
+                    <div class="info"><h4>Vitor</h4><span>Patrimônio</span></div>
+                    <a class="number">9796</a>
+                </div>
+
+            </div>
+        </div>
+            
+        <div class="sub-grupo">
+            <h4 class="titulo-interno"><i class="fa-solid fa-lightbulb"></i> PAM</h4>
+            <div class="grid-ramais-3">
+
+                <div class="cards" data-search="Juliana Conde">
+                    <div class="info"><h4>Juliana Conde</h4><span>PAM</span></div>
+                    <a class="number">9805</a>
+                </div>
+
+                <div class="cards" data-search="Taiane">
+                    <div class="info"><h4>Taiane</h4><span>PAM</span></div>
+                    <a  class="number">9806</a>
+                </div>
+
+                <div class="cards" data-search="Luciane">
+                    <div class="info"><h4>Luciane</h4><span>PAM</span></div>
+                    <a class="number">9805</a>
+                </div>
+
+                <div class="cards" data-search="Denise">
+                    <div class="info"><h4>Denise</h4><span>PAM</span></div>
+                    <a class="number">9806</a>
+                </div>
+
+            </div>
+        </div>
+        
+        <div class="sub-grupo">
+            <h4 class="titulo-interno"><i class="fa-solid fa-address-card"></i> Matrícula</h4>
+            <div class="grid-ramais-3">
+
+                <div class="cards" data-search="Angélica">
+                    <div class="info"><h4>Angélica</h4><span>Matrícula</span></div>
+                    <a  class="number">9787</a>
+                </div>
+
+                <div class="cards" data-search="Lucimara">
+                    <div class="info"><h4>Lucimara</h4><span>Matrícula</span></div>
+                    <a  class="number">9788</a>
+                </div>
+
+                <div class="cards" data-search="Soraia">
+                    <div class="info"><h4>Soraia</h4><span>Matrícula</span></div>
+                    <a  class="number">9789</a>
+                </div>
+
+                <div class="cards" data-search="Karine">
+                    <div class="info"><h4>Karine</h4><span>Matrícula</span></div>
+                    <a  class="number">9790</a>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="sub-grupo">
+            <h4 class="titulo-interno"><i class="fa-solid fa-users"></i>Recursos Humanos (RH)</h4>
+            <div class="grid-ramais-3">
+
+                <div class="cards" data-search="Juraci">
+                    <div class="info"><h4>Juraci</h4><span>RH</span></div>
+                    <a  class="number">9791</a>
+                </div>
+
+                <div class="cards" data-search="Jennifer">
+                    <div class="info"><h4>Jennifer (estagiária)</h4><span>RH</span></div>
+                    <a  class="number">9792</a>
+                </div>
+
+                <div class="cards" data-search="Jéssica">
+                    <div class="info"><h4>Jéssica</h4><span>RH</span></div>
+                    <a  class="number">9793</a>
+                </div>
+
+                <div class="cards" data-search="Larissa">
+                    <div class="info"><h4>Larissa</h4><span>RH</span></div>
+                    <a  class="number">9809</a>
+                </div>
+
+                <div class="cards" data-search="Jayne">
+                    <div class="info"><h4>Jayne</h4><span>RH</span></div>
+                    <a  class="number">9794</a>
+                </div>
+
+                <div class="cards" data-search="Henrique">
+                    <div class="info"><h4>Henrique</h4><span>RH</span></div>
+                    <a  class="number">9808</a>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="sub-grupo">
+            <h4 class="titulo-interno"><i class="fa-solid fa-boxes-packing"></i>Compras</h4>
+            <div class="grid-ramais">
+
+                <div class="cards" data-search="Estela">
+                    <div class="info"><h4>Estela</h4><span>Compras</span></div>
+                    <a  class="number">9777</a>
+                </div>
+
+                <div class="cards" data-search="Yara">
+                    <div class="info"><h4>Yara</h4><span>Compras</span></div>
+                    <a  class="number">9778</a>
+                </div>
+
+                <div class="cards" data-search="Jadeny Alexandre">
+                    <div class="info"><h4>Jadeny e Alexandre</h4><span>Compras</span></div>
+                    <a  class="number">9779</a>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="sub-grupo">
+            <h4 class="titulo-interno"><i class="fa-solid fa-laptop-code"></i>Suporte TI</h4>
+            <div class="grid-ramais-2">
+
+                <div class="cards" data-search="Alex Gabriel Luis">
+                    <div class="info"><h4>Alex, Gabriel e Luis</h4><span>TI</span></div>
+                    <a  class="number">9780</a>
+                </div>
+
+                <div class="cards" data-search="Cauê">
+                    <div class="info"><h4>Cauê</h4><span>Betha</span></div>
+                    <a  class="number">9781</a>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div id="tab-cem" class="tab-content">
+        <div class="grupo-setor">
+            <h3 class="setor-titulo"> Escolas Municipais (CEM)</h3>
+            <p class="contador">Carregando contatos...</p>
+
+            <div class="grid-ramais">
+                <div class="cards" data-search="Anita"><div class="info"><h4>Anita</h4><span>CEM</span></div><div class="number"><i class="fa-solid fa-phone"></i>3423-6969</div></div>
+
+                <div class="cards" data-search="Duarte"><div class="info"><h4>B. I. Duarte</h4><span>CEM</span></div><div class="number"><i class="fa-solid fa-phone"></i>3423-1444</div>
+                <div class="number">3422-8848</div></div>
+
+                <div class="cards" data-search="Clary"><div class="info"><h4>Clary</h4><span>CEM</span></div><div class="number"><i class="fa-solid fa-phone"></i>3422-8008</div></div>
+
+                <div class="cards" data-search="Faustino"><div class="info"><h4>Faustino</h4><span>CEM</span></div><div class="number"><i class="fa-solid fa-phone"></i>3421-4545</div>
+                <div class="number">3422-4410</div></div>
+                
+                <div class="cards" data-search="Geyner"><div class="info"><h4>Geyner</h4><span>CEM</span></div><div class="number"><i class="fa-solid fa-phone"></i>3422-3541</div></div>
+
+                <div class="cards" data-search="Irma"><div class="info"><h4>Irma</h4><span>CEM</span></div><div class="number"><i class="fa-solid fa-phone"></i>3421-7630</div></div>
+
+                <div class="cards" data-search="Mimo"><div class="info"><h4>MIMO</h4><span>CEM</span></div><div class="number"><i class="fa-solid fa-phone"></i>3421-6686</div></div>
+
+                <div class="cards" data-search="Maria Martins"><div class="info"><h4>Mª Martins</h4><span>CEM</span></div><div class="number"><i class="fa-solid fa-phone"></i>3422-3686</div></div>
+
+                <div class="cards" data-search="Pieroni"><div class="info"><h4>Pieroni</h4><span>CEM</span></div><div class="number"><i class="fa-solid fa-phone"></i>3421-4090</div></div>
+
+                <div class="cards" data-search="Neyde"><div class="info"><h4>Neyde</h4><span>CEM</span></div><div class="number"><i class="fa-solid fa-phone"></i>3422-3869</div></div>
+
+                <div class="cards" data-search="Valdir"><div class="info"><h4>Valdir</h4><span>CEM</span></div><div class="number"><i class="fa-solid fa-phone"></i>3422-3163</div></div>
+
+                <div class="cards" data-search="Orozimbo"><div class="info"><h4>Orozimbo</h4><span>CEM</span></div><div class="number"><i class="fa-solid fa-phone"></i>3421-4108</div></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="tab-emei" class="tab-content">
+        <div class="grupo-setor">
+            <h3 class="setor-titulo">Educação Infantil (CEMEI / EMEI)</h3>
+            <p class="contador">Carregando contatos...</p>
+
+            <div class="grid-ramais">
+                <div class="cards" data-search="Abilio"><div class="info"><h4>Abílio</h4><span>CEMEI</span></div><div class="number"><i class="fa-solid fa-phone"></i>3423-3744</div></div>
+
+                <div class="cards" data-search="Alberto"><div class="info"><h4>Alberto</h4><span>EMEI</span></div><div class="number"><i class="fa-solid fa-phone"></i>3422-8819</div></div>
+
+                <div class="cards" data-search="Amélia"><div class="info"><h4>Amélia</h4><span>CEMEI</span></div><div class="number"><i class="fa-solid fa-phone"></i>3422-8876</div></div>
+
+                <div class="cards" data-search="Ana F"><div class="info"><h4>Ana F.</h4><span>CEMEI</span></div><div class="number"><i class="fa-solid fa-phone"></i>3422-8270</div></div>
+
+                <div class="cards" data-search="Aracy"><div class="info"><h4>Aracy.</h4><span>CEMEI</span></div><div class="number"><i class="fa-solid fa-phone"></i>3422-8446</div></div>
+
+                <div class="cards" data-search="Benedita"><div class="info"><h4>Benedita</h4><span>CEMEI</span></div><div class="number"><i class="fa-solid fa-phone"></i>3423-6270</div></div>
+
+                <div class="cards" data-search="Célia"><div class="info"><h4>Célia</h4><span>CEMEI</span></div><div class="number"><i class="fa-solid fa-phone"></i>-</div></div>
+
+                <div class="cards" data-search="Elza"><div class="info"><h4>Elza</h4><span>CEMEI</span></div><div class="number"><i class="fa-solid fa-phone"></i>3422-3470</div></div>
+
+                <div class="cards" data-search="Floriano Marzochi"><div class="info"><h4>F. Marzochi</h4><span>CEMEI</span></div><div class="number"><i class="fa-solid fa-phone"></i> 3422-5383</div></div>
+
+                <div class="cards" data-search="Luiza G"><div class="info"><h4>Luiza G.</h4><span>CEMEI</span></div><div class="number"><i class="fa-solid fa-phone"></i>3423-4253</div></div>
+
+                <div class="cards" data-search="Helena B"><div class="info"><h4>Helena B.</h4><span>CEMEI</span></div><div class="number"><i class="fa-solid fa-phone"></i>3422-8098</div></div>
+
+                <div class="cards" data-search="José Modesto"><div class="info"><h4>J. Modesto</h4><span>CEMEI</span></div><div class="number"><i class="fa-solid fa-phone"></i>3422-8250</div></div>
+
+                <div class="cards" data-search="Magaly"><div class="info"><h4>Magaly</h4><span>CEMEI</span></div><div class="number"><i class="fa-solid fa-phone"></i>18 98169-9672</div></div>
+
+                <div class="cards" data-search="Maria Lygia"><div class="info"><h4>Mª Lygia</h4><span>CEMEI</span></div><div class="number"><i class="fa-solid fa-phone"></i>3405-1244</div></div>
+
+                <div class="cards" data-search="Mercedes"><div class="info"><h4>Mercedes</h4><span>CEMEI</span></div><div class="number"><i class="fa-solid fa-phone"></i>3422-8485</div></div>
+
+                <div class="cards" data-search="Orozília"><div class="info"><h4>Orozília</h4><span>CEMEI</span></div><div class="number"><i class="fa-solid fa-phone"></i>3422-8061</div></div>
+
+                <div class="cards" data-search="Terezinha Guerra"><div class="info"><h4>Terezinha G.</h4><span>CEMEI</span></div><div class="number"><i class="fa-solid fa-phone"></i>3423-8850</div></div>
+
+                <div class="cards" data-search="Terruel"><div class="info"><h4>Terruel</h4><span>CEMEI</span></div><div class="number"><i class="fa-solid fa-phone"></i>3422-8850</div></div>
+
+                <div class="cards" data-search="Valter Peresi"><div class="info"><h4>V. Peresi</h4><span>CEMEI</span></div><div class="number"><i class="fa-solid fa-phone"></i>3422-6135</div></div>
+
+                <div class="cards" data-search="Vandira"><div class="info"><h4>Vandira</h4><span>CEMEI</span></div><div class="number"><i class="fa-solid fa-phone"></i>5704-9584</div></div>
+
+                <div class="cards" data-search="Vânia"><div class="info"><h4>Vânia</h4><span>CEMEI</span></div><div class="number"><i class="fa-solid fa-phone"></i>3423-2730</div></div>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="tab-outros" class="tab-content">
+        <div class="grupo-setor">
+            <h3 class="setor-titulo">Outros Locais</h3>
+            <p class="contador">Carregando contatos...</p>
+
+            <div class="grid-ramais">
+
+                <div class="cards" data-search="Transporte Escolar"><div class="info"><h4>Transporte Escolar</h4><span>Rua Hermógenes Bruschi, 1954 - CEP 15500-006</span></div><div class="number">Tel. (17) 3406-0779</div></div>
+
+                <div class="cards" data-search="Polo UAB"><div class="info"><h4>Polo UAB</h4><span>Rua Pernambuco, 1736 - CEP 15501-095</span></div><div class="number">Tel. (17) 3422-8839</div></div>
+
+                <div class="cards" data-search="Almoxarifado"><div class="info"><h4>Almoxarifado</h4><span>Rua Pernambuco, 4846 - CEP 15500-006</span></div><div class="number">Tel. (17) 3422-3160</div></div>
+            </div>
+        </div>
+    </div>
+
+        </div>
+    </section>
+
+    <!-- calendario -->
+    <section class="fundo">
+        <div class="container-1">
+            <div class="caixa" style="margin-bottom: 40px;">
+                <div class="barras-decorativas">
+                    <span></span>
+                    
+                </div>
+
+                <div class="titulo">
+                    <h2>Calendário Escolar 2026</h2>
+                    <p>Confira o calendário completo de funcionamento da rede municipal de ensino</p>
+                </div>
+            </div>
+            
+            <div class="moldura">
+                <img src="Imagens/Calendário Escolar - 2026.png" alt="Calendário Escolar 2026" onclick="abrirZoom(this.src)">
+
+                <div class="area-download">
+                    
+                    <a href="Imagens/Calendário Escolar - 2026.pdf" download="Calendario_Escolar_2026.png" class="btn-download">
+                        <i class="fa-solid fa-file-arrow-down"></i> Baixar Calendário (PDF)
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Atalhos -->
+    <section style=" background: var(--cor-branco); padding: 30px;  box-shadow: 40px 0px 60px rgba(0,0,0,0.05);;">
+       
+        <div class="caixa">
+            <!--<div class="barras-decorativas"><span></span></div> -->
+            <div class="titulo">
+                <h2>Dicas Rápidas de TI</h2>
+                <p>Atalhos do Windows para agilizar seu dia a dia</p>
+            </div>
+        </div>
+
+        <div class="container" style="padding-top: 0px; padding-bottom: 40px;">
+
+
+            <div class="grid-atalhos">
+
+                <div class="card-atalho">
+                    <div class="teclas">
+                        <kbd>Win</kbd> <span>+</span> <kbd>Shift</kbd> <span>+</span> <kbd>S</kbd>
+                    </div>
+                    <div class="desc">
+                        <h4>Captura de Tela</h4>
+                        <p>Tira print apenas de uma parte selecionada da tela.</p>
+                    </div>
+                </div>
+
+                <div class="card-atalho">
+                    <div class="teclas">
+                        <kbd>Win</kbd> <span>+</span> <kbd>L</kbd>
+                    </div>
+                    <div class="desc">
+                        <h4>Bloquear Tela</h4>
+                        <p>Vai sair da sala? Bloqueie o PC instantaneamente.</p>
+                    </div>
+                </div>
+
+                <div class="card-atalho">
+                    <div class="teclas">
+                        <kbd>Win</kbd> <span>+</span> <kbd>D</kbd>
+                    </div>
+                    <div class="desc">
+                        <h4>Área de Trabalho</h4>
+                        <p>Minimiza tudo e mostra a área de trabalho.</p>
+                    </div>
+                </div>
+
+                <div class="card-atalho">
+                    <div class="teclas">
+                        <kbd>Ctrl</kbd> <span>+</span> <kbd>Shift</kbd> <span>+</span> <kbd>T</kbd>
+                    </div>
+                    <div class="desc">
+                        <h4>Reabrir Aba</h4>
+                        <p>Fechou uma aba sem querer no navegador? Isso recupera.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    
+    <!-- Divisão -->
+    <section class="fundo">
+        <div class="container">
+            <div class="caixa">
+                <div class="barras-decorativas">
+                    <span></span>
+                    
+                </div>
+
+                <div class="titulo">
+                    <h1>Tutoriais e Manuais</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tutorias / Manuais -->
+    <section id="manuais" class="docs-section">
+    <div class="docs-container">
+        
+        <aside class="sidebar-nav">
+            <h3><i class="fa-solid fa-book-open"></i> Navegação</h3>
+
+            <details open> <summary><i class="fa-solid fa-print"></i> Impressoras</summary>
+                <div class="submenu">
+                    <a href="#" onclick="abrirManual(event, 'hp-432')" class="link-manual active">HP 432</a>
+                    <a href="#" onclick="abrirManual(event, 'canon-gx4010')">Canon GX4010</a>
+                
+                </div>
+            </details>
+
+            <details>
+                <summary><i class="fa-solid fa-video"></i> Câmeras (SIM Next)</summary>
+                <div class="submenu">
+                    <a href="#" onclick="abrirManual(event, 'visualizar')">Visualização das Câmeras</a>
+                    <a href="#" onclick="abrirManual(event, 'gravação')">Gravação das Imagens</a>
+                </div>
+            </details>
+
+            <details>
+                <summary><i class="fa-solid fa-file-signature"></i> 1DOC</summary>
+                <div class="submenu">
+                    <a href="#" onclick="abrirManual(event, 'refiltinta')">Refil Toner/Tinta</a>
+                    <a href="#" onclick="abrirManual(event, 'manutenimp')">Manutenção. de Impressora</a>
+                    <a href="#" onclick="abrirManual(event, 'lousadigital')">Lousa Digital</a>
+                    <a href="#" onclick="abrirManual(event, 'outros')">Computador e Rede</a>
+                    <a href="#" onclick="abrirManual(event, 'equipamento')">Equipamentos</a>
+                </div>
+            </details>
+        </aside>
+
+
+        <main class="content-area">
+            <!-- Impressoras -->
+            <div id="hp-432" class="tutorial-box active-tutorial">  
+                
+                <div class="header-tutorial">
+    
+                    <div class="img-imp"><img src="Manuais/Impressoras/HP 432/HP432.jpg" alt="Impressora HP 432"></div>
+
+                    <div class="info-container">
+                        <div class="titulo-e-botao">
+                            <h2>HP Laser MFP 432</h2>
+                            
+                            <a href="Manuais/Impressoras/HP 432/HP_Laser_MFP_432_Full_Software_and_Drivers_1.09.zip" class="btn-download-header">
+                                <i class="fa-solid fa-download"></i> Driver da Impressora
+                            </a>
+                        </div>
+                        <p>Selecione abaixo o que deseja fazer:</p>
+            
+                        <div class="badge-container" style="justify-content: flex-start; margin-top: 10px;">
+                            <button class="badge active" onclick="trocarAbaHP('instalacao', this)">Instalação</button>
+                            <button class="badge" onclick="trocarAbaHP('contador', this)">Contador de Páginas</button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <hr class="divider">              
+
+                <div id="aba-instalacao" class="bloco-conteudo">
+                    <div class="alerta-box">
+                    <p>Siga este guia para instalar a impressora nos computadores da escola. </p>
+                    <p>• Verifique se a impressora está ligada na tomada. </p>
+                    <p>• Conecte o cabo USB no computador <strong>OU</strong> o cabo de rede na impressora</p> 
+                    </div>
+
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Início e Acordos</h4>
+                        <p>Ao abrir o instalador, clique em "Avançar" na tela de boas-vindas.</p>
+                        <p>Na tela seguinte, marque as duas caixas de seleção para aceitar o contrato de licença e as configurações de coleta de dados. Clique em <strong>Avançar</strong>.</p>
+                        <img src="Manuais/Impressoras/HP 432/Instalação/2.png" class="step-img">
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Tipo de Conexão</h3>
+                        <p>Selecione o tipo de conexão desejada:</p>       
+                        <p><strong>• Conexão USB:</strong> Se o cabo estiver ligado direto no PC.</p>
+                        <p><strong>• Conexão de rede (Recomendado):</strong> Se a impressora estiver ligada no cabo de internet</p>
+                        <img src="Manuais/Impressoras/HP 432/Instalação/3.png" class="step-img">
+                    </div>
+                </div>
+                    
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Configuração de Rede</h3>
+                        <p><strong>Selecione: "Não, a impressora já está conectada à minha rede."</strong></p>      
+                        <img src="Manuais/Impressoras/HP 432/Instalação/4.png" class="step-img">
+                    </div>
+                </div>
+                    
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Selecionar a Impressora</h3>
+                        <p>O sistema irá buscar as impressoras. Selecione a impressora que aparecer na lista ex: Pedagógico, Gestão.</p>    
+                        <img src="Manuais/Impressoras/HP 432/Instalação/5.png" class="step-img">
+                        <div class="alerta-box">
+                        <strong>Dica:</strong> Se o Windows não reconhecer, reinicie a impressora.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h3>Softwares e Drivers</h3>
+                        <p>Mantenha a seleção recomendada (Driver da impressora e Driver de digitalização marcados) e clique em <strong>Avançar</strong>.</p> 
+                        <img src="Manuais/Impressoras/HP 432/Instalação/6.png" class="step-img">
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">6</div>
+                    <div class="step-content">
+                        <h3>Conclusão</h3>
+                        <p>Aguarde a barra de instalação encher. Ao final, você pode desmarcar a opção de imprimir página de teste para economizar papel e clicar em <strong>Concluir</strong>.</p>
+                        <img src="Manuais/Impressoras/HP 432/Instalação/7.png" class="step-img">
+                    </div>
+                </div>    
+                </div>  
+                
+                <div id="aba-contador" class="bloco-conteudo" style="display: none;">
+                <div class="alerta-box">
+                    <strong>Nota:</strong> Não precisa estar conectado no computador. Faremos direto no painel da impressora.
+                </div>
+
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Acessar Menu</h3>
+                        <p>No painel da impressora, aperte o botão <strong>...</strong>.</p>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Config. de Sistema</h3>
+                        <p>Use as setas <i class="fa-solid fa-arrow-right"></i> para encontrar <strong>"Config. Sist."</strong> e aperte OK.</p>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Relatórios</h3>
+                        <p>Vá até a opção <strong>"Relatórios"</strong> e aperte OK.</p>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Imprimir Configuração</h3>
+                        <p>Selecione <strong>"Contador de Uso"</strong> e aperte OK e SIM para imprimir. A folha será impressa com o total de páginas.</p>
+                    </div>
+                </div>
+
+                <div style="text-align: center; margin: 20px 0;padding: 20px;">
+                    <video controls style="width: auto;max-width: 100%; max-height: 500px;; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); border: 1px solid #e2e8f0;">
+                        <source src="Manuais/Impressoras/HP 432/Contador/Tutorial Contador de Páginas.mp4" type="video/mp4">
+                        <p>Seu navegador não suporta a reprodução deste vídeo. 
+                        <a href="Manuais/Impressoras/HP 432/Contador/Tutorial Contador de Páginas.mp4" download>Clique aqui para baixar o vídeo.</a>
+                        </p>
+                    </video>
+                </div>
+                </div>
+                
+
+            </div>
+          
+            <div id="canon-gx4010" class="tutorial-box">
+
+                <div class="header-tutorial">
+    
+                    <div class="img-imp"><img src="Manuais/Impressoras/Canon GX4010/CANONGX4010.png" alt="Canon GX4010"></div>
+
+                    <div class="info-container">
+                        <div class="titulo-e-botao">
+                            <h2>Canon GX4010</h2>
+                            
+                            <a href="Manuais/Impressoras/Canon GX4010/Msetup4.zip" class="btn-download-header">
+                                <i class="fa-solid fa-download"></i> Driver da Impressora
+                            </a>
+                        </div>
+                        <p>Selecione abaixo o que deseja fazer:</p>
+            
+                        <div class="badge-container" style="justify-content: flex-start; margin-top: 10px;">
+                            <button class="badge active" onclick="trocarAbaHP('instalacao', this)">Instalação</button>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div id="epson-l3250" class="tutorial-box">
+                
+            </div>
+
+
+            <!-- SIM Next 
+            <div id="simnext" class="tutorial-box">
+                
+                <div class="header-tutorial">
+    
+                    <div class="img-imp"><img src="Manuais/Câmeras/SIMNEXT.png" alt="SIM Next"></div>
+
+                    <div class="info-container">
+                        <div class="titulo-e-botao">
+                            <h2>SIM Next</h2>
+                            
+                            <a href="Drivers/HP_Laser_MFP_432_Driver.exe" class="btn-download-header">
+                                <i class="fa-solid fa-download"></i> Driver 
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <hr class="divider"> 
+
+                <div class="corpo-tutorial">
+
+                    <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Iniciar Instalação</h3>
+                        <p>Ao executar o instalador, a primeira tela informará sobre a compatibilidade. Clique em <strong>Avançar</strong>.</p>
+                        <p>Na sequência, você deve concordar com a coleta de dados técnicos (necessário para o suporte) e aceitar os termos de licença.</p>
+                        <p>Marque a caixa <strong>"Eu concordo..."</strong> e depois <strong>"Eu aceito os termos..."</strong> nas telas seguintes.</p>
+                        <img src="Manuais/Câmeras/Instalação/2.png" style="max-width: 100%; border: 1px solid #e2e8f0; border-radius: 8px; margin: 10px 0;">
+                        
+                    </div>
+                    </div>
+
+                    <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Pasta e Componentes</h3>
+                        <p>O instalador sugerirá a pasta padrão. Se desejar instalar em outra pasta clicle em procurar. Clique em <strong>Avançar</strong>.</p>
+                        
+                        <img src="Manuais/Câmeras/Instalação/3.png" class="step-img">
+                        <p>Na tela de seleção de componentes, mantenha as opções marcadas (Serviço de Gravação e Media Player) e clique em <strong>Avançar</strong>.</p>
+                        <img src="Manuais/Câmeras/Instalação/4.png" class="step-img">
+
+                    </div>
+                    </div>
+
+                    <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Passo 3: Conclusão da Instalação</h3>
+                        <p>Confirme o resumo clicando em <strong>Instalar</strong>. Aguarde o processo finalizar.</p>
+                        <p>Ao final, marque a opção "Iniciar o Intelbras SIM Next" e clique em <strong>Concluir</strong>.</p>
+                        <img src="Manuais/Câmeras/Instalação/5.png" class="step-img">
+
+                    </div>
+                    </div>
+
+                    <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Passo 4: Criação de Senha Admin</h3>
+                        <p>Ao abrir o programa pela primeira vez, você precisará criar uma senha para o usuário <strong>admin</strong>. Esta senha é local, ou seja, serve apenas para abrir o programa neste computador.</p>
+                        
+                        <div class="alerta-box">
+                            <strong>Importante:</strong> Crie uma senha segura e anote. Se perder esta senha, será necessário reinstalar o programa. Sugestão padrão: <em>Escola@2026</em>.
+                        </div>
+                        <img src="Manuais/Câmeras/Instalação/6.png"  class="step-img">
+
+                    </div>
+                    </div>
+
+
+                    <div class="step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h3>Passo 6: Adicionando as Câmeras</h3>
+                        <p>Pronto! A instalação foi concluída. No menu principal, clique em <strong>"Dispositivos"</strong> para começar a adicionar as câmeras da escola.</p>
+                        <img src="Manuais/Câmeras/Instalação/7.png" class="step-img">
+
+                        <p style="padding-top: 30px;">Selecione as câmeras das escola</p>
+                        <img src="Manuais/Câmeras/Instalação/8.png" class="step-img">
+
+                        <p style="padding-top: 30px;">Coloque o Usurário e a Senha e clique em <strong>"Adicionar"</strong></p>
+                        <div class="alerta-box">
+                            <strong>Importante:</strong> 
+                        </div>
+                        <img src="Manuais/Câmeras/Instalação/9.png" class="step-img">
+
+                        <p>Concluindo as câmeras apareceram no campo <strong>"Dispositivos cadastrados no sistema"</strong> </p>
+                    </div>
+                    </div>
+
+                    <div class="step">
+                    <div class="step-number">6</div>
+                    <div class="step-content">
+                        <h3>Visualizar Câmeras</h3>
+                        <p>Para ver o manual de visualização ou download de imagens confira o tutorias na barra lateral.
+                        
+                        <div class="alerta-box" style="color: #0369a1; background-color: #87d3f7; border-left: 4px solid #0369a1;">
+                            <strong>Dica:</strong> Para ver o manual de visualização ou download de imagens confira o tutorias na barra lateral.
+                        </div>
+    
+
+                    </div>
+                    </div>
+                </div>
+
+            </div>-->
+
+            <div id="visualizar" class="tutorial-box">
+                
+                <div class="header-tutorial">
+    
+                    <div class="img-imp"><img src="Manuais/Câmeras/SIMNext.png" alt="SIM Next"></div>
+
+                    <div class="info-container">
+                        <div class="titulo-e-botao">
+                            <h2>Câmeras: Visualização ao Vivo</h2>
+                            
+                            <p>Aprenda a acessar as câmeras em tempo real, organizar a quantidade de telas e salvar sua visualização favorita no Intelbras SIM Next.</p></p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <hr class="divider"> 
+
+                <div class="corpo-tutorial">
+
+                    <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Abrir a aba de Visualização</h3>
+                        <p>Na tela inicial do SIM Next, clique no ícone <strong>Visualização</strong>. Uma nova aba será aberta com a tela dividida.</p>
+                        
+                        <img src="Manuais/Câmeras/Visualização/1.png" class="step-img">
+                        
+                    </div>
+                    </div>
+
+                    <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Selecionar e Abrir as Câmeras</h3>
+                        <p>No menu lateral esquerdo, chamado <strong>Dispositivos</strong>, você verá a lista de DVRs (os aparelhos que gravam as imagens da escola).</p>
+                        <img src="Manuais/Câmeras/Visualização/2.png" class="step-img">
+
+                        <p style="margin-top: 50px">1. Clique no ícone de <strong>"+"</strong> ao lado do nome do DVR (ex: SEEDU - DVR 201) para expandir a lista de câmeras.</p>
+                        <p>2. Para abrir, basta <strong>clicar e arrastar</strong> o nome da câmera para o quadrado vazio no centro da tela, ou dar um duplo clique no nome dela.</p>
+                        
+                        <img src="Manuais/Câmeras/Visualização/3.png" class="step-img">
+                    </div>
+                    </div>
+
+                    <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3> Escolher a Grade (Quantidade de Câmeras)</h3>
+                        <p>No canto inferior esquerdo da tela, você verá um ícone de grade (geralmente marcado com o número 4). Clique nele para escolher quantas câmeras deseja ver ao mesmo tempo.</p>
+                        <img src="Manuais/Câmeras/Visualização/4.png" class="step-img">
+
+                        <div class="alerta-box" style="background-color: #f0fdf4; border-left-color: #16a34a; color: #166534;">
+                        <strong>Importante:</strong> Câmeras marcadas como "VAGO". Eles indicam que o aparelho (DVR) possui <strong>capacidade livre</strong>. Ou seja, essas são portas disponíveis para a <strong>instalação de novas câmeras físicas</strong> na escola no futuro, caso seja necessário expandir a segurança.
+                        </div>
+                        <img src="Manuais/Câmeras/Visualização/6.png" class="step-img">
+                        
+                    </div>
+                    </div>
+
+                    <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Salvar Visualização (Opcional)</h3>
+                        <p>Se você organizou suas 16 câmeras favoritas e não quer ter que arrastar uma por uma todo dia, clique no botão <strong>Salvar Visualização Atual</strong> (fica no canto inferior esquerdo). Você poderá dar um nome (ex: "Câmeras Pátio") e abri-las com um clique no dia seguinte!</p>
+                        <img src="Manuais/Câmeras/Visualização/8.png" class="step-img">
+                        
+                    </div>
+                    </div>
+
+
+
+                </div>
+
+            </div>
+
+            <div id="gravação" class="tutorial-box">
+
+                <div class="header-tutorial">
+    
+                    <div class="img-imp"><img src="Manuais/Câmeras/SIMNext.png" alt="SIM Next"></div>
+
+                    <div class="info-container">
+                        <div class="titulo-e-botao">
+                            <h2>Câmeras: Buscar e Exportar Gravações</h2>
+                            
+                            <p>Aprenda a resgatar imagens de dias anteriores, pesquisar por horários específicos e exportar os vídeos do Intelbras SIM Next diretamente para o seu computador.</p></p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <hr class="divider">  
+                
+                <div class="corpo-tutorial">
+
+                    <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Abrir a aba de Reprodução</h3>
+                        <p>Na tela inicial do SIM Next, clique no ícone <strong>Reprodução</strong>.</p>
+                        
+                        <img src="Manuais/Câmeras/Gravação/1.png" class="step-img">
+                        
+                    </div>
+                    </div>
+
+                    <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Pesquisar a Gravação</h3>
+                        <p>Uma janela chamada "Buscar Gravação" vai aparecer. Siga passos :</p>
+                        <p><strong>1. Selecione as câmeras:</strong>. Marque a caixa de seleção (▢) ao lado do nome do DVR para buscar imagens de todas as câmeras. Caso queira uma câmera específica, clique no ícone de <strong>"+"</strong> para expandir a lista e selecione apenas a câmera desejada.</p>
+                        <p><strong>2. Defina o período:</strong>. Clique nos campos de "Horário de início" e "Horário final" para abrir o calendário e definir a data e a hora exata que você deseja assistir </p>
+                        <img src="Manuais/Câmeras/Gravação/2.png" class="step-img">
+
+                        <div class="alerta-box" style="background-color: #f0fdf4; border-left-color: #16a34a; color: #166534;">
+                        <strong><i class="fa-solid fa-circle-info"></i> Importante sobre os dias em verde:</strong><br>
+                        Os dias destacados em verde no calendário possuem gravações disponíveis. O limite de armazenamento varia conforme a capacidade do equipamento:
+                            
+                        <ul style="margin-top: 8px; margin-bottom: 0; margin-left: 20px;">
+                        <li><strong>DVR de 16 câmeras:</strong> armazena as imagens por aproximadamente <strong>32 dias</strong>.</li>
+                        <li><strong>DVR de 32 câmeras:</strong> armazena as imagens por aproximadamente <strong>15 dias</strong>.</li>
+                        </ul>
+
+                        <img src="Manuais/Câmeras/Gravação/3.png" class="step-img">
+                    </div>
+                    </div>
+                    </div>
+
+                    <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Linha do Tempo e Backup</h3>
+                        <p>Para salvar o vídeo,com a câmera selecionada clique no botão <strong><i class="fa-solid fa-floppy-disk"></i> Fazer backup de mídia</strong>.</p>
+                        
+                        <img src="Manuais/Câmeras/Gravação/4.png" class="step-img">
+                        
+                    </div>
+                    </div>
+
+                    <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Hora Inicial e Hora Final</h3>
+                        <p>Na janelinha que abrir, ajuste a "Hora Inicial" e a "Hora Final" do corte exato que você deseja salvar. Em seguida, clique em <strong>Baixar</strong>.</p>
+                        
+                        <img src="Manuais/Câmeras/Gravação/5.png" class="step-img">
+                        
+                    </div>
+                    </div>
+
+                    <div class="step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h3>Exportar o Vídeo para o PC</h3>
+                        <p>Volte na tela inicial do SIM Next (aba Nova Aba) e clique em <strong>Mídia</strong>.</p>
+                        <img src="Manuais/Câmeras/Gravação/6.png" class="step-img">
+
+                        <p>Acessando a aba <strong>Vídeos</strong>, você poderá visualizar todas as gravações baixadas. Utilizando os ícones localizados abaixo de cada arquivo, é possível realizar as seguintes ações:</p>
+                        <ul style="margin-left: 20px; color: #475569; line-height: 1.8; margin-bottom: 15px;">
+                            <li><i class="fa-solid fa-pen" style="color: #94a3b8; width: 20px;"></i> <strong>Renomear:</strong> Altera o nome do arquivo para facilitar a identificação.</li>
+                            <li><i class="fa-solid fa-file-export" style="color: #94a3b8; width: 20px;"></i> <strong>Exportar:</strong> Salva a gravação em outra pasta do seu computador (Área de Trabalho, Pen Drive, etc).</li>
+                            <li><i class="fa-solid fa-folder-open" style="color: #94a3b8; width: 20px;"></i> <strong>Abrir local:</strong> Abre a pasta do sistema onde o arquivo original está guardado.</li>
+                        </ul>
+                        <img src="Manuais/Câmeras/Gravação/7.png" class="step-img">
+
+
+                    </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- 1DOC -->
+            <div id="refiltinta" class="tutorial-box">
+
+                <div class="header-tutorial">
+    
+                    <div class="logo-img"><img src="Manuais/1Doc/1DOC.png" alt="1Doc"></div>
+                    <div class="info-container">
+                        <div class="titulo-e-botao">
+                            <h2>Solicitação de Toner / Tinta</h2>
+                            <a href="https://votuporanga.1doc.com.br/b.php?pg=o%2Flogin&redirecionar=cGc9ZG9jL3ZlciZpdGQ9MjAmb3JpZ2VtPWVtYWlsJmhhc2g9MzU5NjRGNkE2QTY3NDRCNUY0NjQxMzhBJnM9dm90dXBvcmFuZ2EmaWRfZW1pc3Nhbz0xMDcxMzE0OQ%3D%3D&n=3" target="_blank" class="btn-download-header">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> Acessar Sistema
+                            </a>
+                        </div>
+                        <p>Passo a passo para solicitar recarga de  refil ou toner via 1Doc.
+                        </p>
+                    </div>
+
+                </div>
+
+                <hr class="divider">  
+                
+                <div class="corpo-tutorial">
+
+                    <div class="alerta-box" style="background-color: #f0f9ff; border-left-color: #0ea5e9; color: #0369a1;">
+                    <i class="fa-solid fa-circle-info"></i> <strong>Dica do Sistema:</strong> 
+                    Tudo que tiver um asterisco vermelho (<span style="color: red; font-weight: bold;">*</span>) é <strong>Obrigatório</strong>. Campos sem asterisco são opcionais e você pode deixar em branco.
+                    </div>
+
+                    <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Iniciar Chamado</h3>
+                        <p>No menu superior, clique em <strong>Novo</strong> e selecione a opção <strong>Chamado técnico</strong>.</p>
+                        <img src="Manuais/1Doc/Toner-Refil/1.png" class="step-img">
+                    </div>
+                    </div>
+
+                    <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Selecionar Assunto</h3>
+                        <p>No campo Assunto, digite "SEEDU" ou procure por: <br><strong>SEEDU :: Chamado Técnico TI</strong>.</p>
+                        <img src="Manuais/1Doc/Toner-Refil/2.png" class="step-img">
+                    </div>
+                    </div>
+
+                    <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Identificação</h3>
+                        <ul>
+                            <li><strong>Unidade Escolar / Setor <span style="color:red">*</span>:</strong> Selecione sua escola na lista (Obrigatório).</li>
+                            <li><strong>Solicitante:</strong> Campo opcional. Preencha apenas se estiver abrindo pedido para outra pessoa.</li>
+                        </ul>
+                        <img src="Manuais/1Doc/Toner-Refil/3.png" class="step-img">
+                    </div>
+                    </div>
+
+                    <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Tipo de Manutenção</h3>
+                        <p>Selecione se a impressora é <strong>Patrimoniada</strong> (da Prefeitura) ou <strong>Terceirizada</strong> (Alugada/Locada).</p>
+                        <img src="Manuais/1Doc/Toner-Refil/4.png" class="step-img">
+                    </div>
+                    </div>
+
+                    <div class="step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h3>Impressora Patrimoniada</h3>
+                        <p>Complete os campos:</p>
+                        <p>•<span style="color:red">*</span>Patrimônio: Digite o número da plaqueta.</p>
+                        <p>•<span style="color:red">*</span>Marca/Modelo: Se não souber, escolha "Outro" e digite abaixo.</p>
+                        <p>•<span style="color:red">*</span>Tipo: Selecione "Solicitação de Toner ou Refil de Tinta".</p>
+                        <img src="Manuais/1Doc/Toner-Refil/5.png" class="step-img">
+                        <p style="margin-top: 15px;">Para o "Refil de Tinta" marque as cores que deseja:</p>
+                        <img src="Manuais/1Doc/Toner-Refil/6.png" class="step-img">
+                    </div>
+                    </div>
+
+                    <div class="step">
+                    <div class="step-number">6</div>
+                    <div class="step-content">
+                        <h3>Impressora Terceirizada</h3>
+                        <p>Preencha o campo Número de Série conforme a etiqueta do equipamento. Para concluir o chamado, siga as mesmas instruções descritas no Passo 5.</p>
+                        <img src="Manuais/1Doc/Toner-Refil/7.png" class="step-img">
+                        
+                        <div class="alerta-box" style="background-color: #f0f9ff; border-left-color: #0ea5e9; color: #0369a1;">
+                        <i class="fa-solid fa-circle-info"></i> <strong>D:</strong> 
+                        Você pode localizar o número de série atrás do equipamento, como mostra a imagem abaixo:
+                        <img src="Manuais/1Doc/Toner-Refil/NSerie.png" class="step-img">
+                        </div>
+
+                    </div>
+                    </div>
+
+                    <div class="step">
+                    <div class="step-number">7</div>
+                    <div class="step-content">
+                        <h3>Anexo Obrigatório</h3>
+                        <p>Para finalizar, clique em <button style="background:#0fbfa5; color:white; border:none; padding:7px 13px; font-weight:bold; border-radius:4px;">Abrir chamado</button></p>
+                        <img src="Manuais/1Doc/Toner-Refil/8.png" class="step-img">
+                        
+                        <div class="alerta-box">
+                            <i class="fa-solid fa-circle-info"></i> <strong>Lembrete:</strong> 
+                            Não esqueça de levar o Contador de Páginas impresso ao buscar o toner. O passo a passo para imprimir esse relatório está disponível no guia de cada impressora.
+                        </div> 
+                        
+                    </div>
+                </div>
+
+
+                </div>
+
+            </div>
+
+            <div id="manutenimp" class="tutorial-box">
+
+                <div class="header-tutorial">
+    
+                    <div class="logo-img"><img src="Manuais/1Doc/1DOC.png" alt="1Doc"></div>
+                    <div class="info-container">
+                        <div class="titulo-e-botao">
+                            <h2>Manuntenção de Impressoras </h2>
+                            <a href="https://votuporanga.1doc.com.br/b.php?pg=o%2Flogin&redirecionar=cGc9ZG9jL3ZlciZpdGQ9MjAmb3JpZ2VtPWVtYWlsJmhhc2g9MzU5NjRGNkE2QTY3NDRCNUY0NjQxMzhBJnM9dm90dXBvcmFuZ2EmaWRfZW1pc3Nhbz0xMDcxMzE0OQ%3D%3D&n=3" target="_blank" class="btn-download-header">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> Acessar Sistema
+                            </a>
+                        </div>
+                        <p>Passo a passo para solicitar manutenção de impressora Patrimoniada ou Terceirizada via 1Doc.
+                        </p>
+                    </div>
+
+                </div>
+
+                <hr class="divider">  
+                
+                <div class="corpo-tutorial">
+
+                    <div class="alerta-box" style="background-color: #f0f9ff; border-left-color: #0ea5e9; color: #0369a1;">
+                    <i class="fa-solid fa-circle-info"></i> <strong>Dica do Sistema:</strong> 
+                    Tudo que tiver um asterisco vermelho (<span style="color: red; font-weight: bold;">*</span>) é <strong>Obrigatório</strong>. Campos sem asterisco são opcionais e você pode deixar em branco.
+                    </div>
+
+                    <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Iniciar Chamado</h3>
+                        <p>No menu superior, clique em <strong>Novo</strong> e selecione a opção <strong>Chamado técnico</strong>.</p>
+                        <img src="Manuais/1Doc/Manun Impre/1.png" class="step-img">
+                    </div>
+                    </div>
+
+                    <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Selecionar Assunto</h3>
+                        <p>No campo Assunto, digite "SEEDU" ou procure por: <br><strong>SEEDU :: Chamado Técnico TI</strong>.</p>
+                        <img src="Manuais/1Doc/Manun Impre/2.png" class="step-img">
+                    </div>
+                    </div>
+
+                    <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Identificação</h3>
+                        <ul>
+                            <li><strong>Unidade Escolar / Setor <span style="color:red">*</span>:</strong> Selecione sua escola na lista (Obrigatório).</li>
+                            <li><strong>Solicitante:</strong> Campo opcional. Preencha apenas se estiver abrindo pedido para outra pessoa.</li>
+                        </ul>
+                        <img src="Manuais/1Doc/Manun Impre/3.png" class="step-img">
+                    </div>
+                    </div>
+
+                    <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Tipo de Manutenção</h3>
+                        <p>Selecione se a impressora é <strong>Patrimoniada</strong> (da Prefeitura) ou <strong>Terceirizada</strong> (Alugada/Locada).</p>
+                        <img src="Manuais/1Doc/Manun Impre/4.png" class="step-img">
+                    </div>
+                    </div>
+
+                    <div class="step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h3>Impressora Patrimoniada</h3>
+                        <p>Complete os campos:</p>
+                        <p>•<span style="color:red">*</span>Patrimônio: Digite o número da plaqueta.</p>
+                        <p>•<span style="color:red">*</span>Marca/Modelo: Se não souber, escolha "Outro" e digite abaixo.</p>
+                        <p>•<span style="color:red">*</span>Tipo: Selecione "Manutenção".</p>
+                        <img src="Manuais/1Doc/Manun Impre/5.png" class="step-img">
+                        <p style="margin-top: 15px;">No campo <strong>Solicitação, problema ou correção</strong>, seja o mais claro e detalhado possível. Uma boa descrição ajuda a equipe técnica a resolver o seu chamado muito mais rápido!</p>
+                        <img src="Manuais/1Doc/Manun Impre/6.png" class="step-img">
+                    </div>
+                    </div>
+
+                    <div class="step">
+                    <div class="step-number">6</div>
+                    <div class="step-content">
+                        <h3>Impressora Terceirizada</h3>
+                        <p>Preencha o campo Número de Série conforme a etiqueta do equipamento. Para concluir o chamado, siga as mesmas instruções descritas no Passo 5.</p>
+                        <img src="Manuais/1Doc/Manun Impre/7.png" class="step-img">
+                        
+                        <div class="alerta-box" style="background-color: #f0f9ff; border-left-color: #0ea5e9; color: #0369a1;">
+                        <i class="fa-solid fa-circle-info"></i> <strong>D:</strong> 
+                        Você pode localizar o número de série atrás do equipamento, como mostra a imagem abaixo:
+                        <img src="Manuais/1Doc/Toner-Refil/NSerie.png" class="step-img">
+                        </div>
+
+                    </div>
+                    </div>
+
+                    <div class="step">
+                    <div class="step-number">7</div>
+                    <div class="step-content">
+                        <h3>Anexo Obrigatório</h3>
+                        <p>Para finalizar, clique em <button style="background:#0fbfa5; color:white; border:none; padding:7px 13px; font-weight:bold; border-radius:4px;">Abrir chamado</button></p>
+                        <img src="Manuais/1Doc/Manun Impre/8.png" class="step-img">
+                        
+                        <div class="alerta-box">
+                            <i class="fa-solid fa-circle-info"></i> <strong>Lembrete:</strong> 
+                            Em casos de manutenção de impressoras terceirizadas, a empresa responsável possui um prazo de atendimento de até <strong>8 horas úteis</strong> para comparecer à escola e solucionar o problema.
+                        </div> 
+                        
+                    </div>
+                </div>
+
+
+                </div>
+
+            </div>
+
+            <div id="lousadigital" class="tutorial-box">
+
+                <div class="header-tutorial">
+    
+                    <div class="logo-img"><img src="Manuais/1Doc/1DOC.png" alt="1Doc"></div>
+                    <div class="info-container">
+                        <div class="titulo-e-botao">
+                            <h2>Lousa Digital</h2>
+                            <a href="https://votuporanga.1doc.com.br/b.php?pg=o%2Flogin&redirecionar=cGc9ZG9jL3ZlciZpdGQ9MjAmb3JpZ2VtPWVtYWlsJmhhc2g9MzU5NjRGNkE2QTY3NDRCNUY0NjQxMzhBJnM9dm90dXBvcmFuZ2EmaWRfZW1pc3Nhbz0xMDcxMzE0OQ%3D%3D&n=3" target="_blank" class="btn-download-header">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> Acessar Sistema
+                            </a>
+                        </div>
+                        <p>Passo a passo para manutenção em Lousa Digital via 1Doc.
+                        </p>
+                    </div>
+
+                </div>
+
+                <hr class="divider">  
+                
+                <div class="corpo-tutorial">
+                
+                </div>
+
+            </div>
+
+            <div id="outros" class="tutorial-box">
+
+                <div class="header-tutorial">
+    
+                    <div class="logo-img"><img src="Manuais/1Doc/1DOC.png" alt="1Doc"></div>
+                    <div class="info-container">
+                        <div class="titulo-e-botao">
+                            <h2>Computador e Rede</h2>
+                            <a href="https://votuporanga.1doc.com.br/b.php?pg=o%2Flogin&redirecionar=cGc9ZG9jL3ZlciZpdGQ9MjAmb3JpZ2VtPWVtYWlsJmhhc2g9MzU5NjRGNkE2QTY3NDRCNUY0NjQxMzhBJnM9dm90dXBvcmFuZ2EmaWRfZW1pc3Nhbz0xMDcxMzE0OQ%3D%3D&n=3" target="_blank" class="btn-download-header">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> Acessar Sistema
+                            </a>
+                        </div>
+                        <p>Passo a passo para manutenção de Computadores ou Internet via 1Doc.
+                        </p>
+                    </div>
+
+                </div>
+
+                <hr class="divider">  
+                
+                <div class="corpo-tutorial">
+                
+                </div>
+
+            </div>
+
+            <div id="equipamento" class="tutorial-box">
+
+                <div class="header-tutorial">
+    
+                    <div class="logo-img"><img src="Manuais/1Doc/1DOC.png" alt="1Doc"></div>
+                    <div class="info-container">
+                        <div class="titulo-e-botao">
+                            <h2>Equipamentos</h2>
+                            <a href="https://votuporanga.1doc.com.br/b.php?pg=o%2Flogin&redirecionar=cGc9ZG9jL3ZlciZpdGQ9MjAmb3JpZ2VtPWVtYWlsJmhhc2g9MzU5NjRGNkE2QTY3NDRCNUY0NjQxMzhBJnM9dm90dXBvcmFuZ2EmaWRfZW1pc3Nhbz0xMDcxMzE0OQ%3D%3D&n=3" target="_blank" class="btn-download-header">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> Acessar Sistema
+                            </a>
+                        </div>
+                        <p>Passo a passo para manutenção de Computadores ou Internet via 1Doc.
+                        </p>
+                    </div>
+
+                </div>
+
+                <hr class="divider">  
+                
+                <div class="corpo-tutorial">
+                
+                </div>
+
+            </div>
+    </div>
+            
+    </div>
+    </section>
+
+
+    
+    <!-- Rodapé -->
+    <div id="componente-footer"></div>
+    
+   
+    
+</body>
+
+</html>
