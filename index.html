@@ -49,19 +49,15 @@
 
     </div>
 
-    <!-- Ramais -->
+    <!-- Titulo Ramais -->
     <section class="fundo">
         
         <div class="caixa">
 
-            <div class="barras-decorativas">
-                <span></span>
-                
-            </div>
-
-            <div class="titulo">
+            <div class="titulo-moderno icone-foco">
+                <div class="icone-circulo"><i class="fa-solid fa-phone-volume"></i></div>
                 <h2>Lista de Ramais</h2>
-                <p>Atalhos para serviços mais procurados</p>
+                <p>Atalhos para serviços mais procurados.</p>
             </div>
         
         <!-- Barra de Pesquisa -->
@@ -505,110 +501,132 @@
         </div>
     </section>
 
-    <!-- calendario -->
-    <section class="fundo">
-        <div class="container-1">
-            <div class="caixa" style="margin-bottom: 40px;">
-                <div class="barras-decorativas">
-                    <span></span>
-                    
-                </div>
+    <!-- Titulo Ferramentas -->
+    <div class="titulo-moderno icone-foco" style="margin-top: 40px;">
+    <div class="icone-circulo"><i class="fa-solid fa-toolbox"></i></div>
+    <h2>Produtividade & Ferramentas</h2>
+    <p>Calendário, Dicas Rápidas e Sistemas Escolares</p>
+    </div>
 
-                <div class="titulo">
-                    <h2>Calendário Escolar 2026</h2>
-                    <p>Confira o calendário completo de funcionamento da rede municipal de ensino</p>
-                </div>
-            </div>
-            
-            <div class="moldura">
-                <img src="Imagens/Calendário Escolar - 2026.png" alt="Calendário Escolar 2026" onclick="abrirZoom(this.src)">
-
-                <div class="area-download">
-                    
-                    <a href="Imagens/Calendário Escolar - 2026.pdf" download="Calendario_Escolar_2026.png" class="btn-download">
-                        <i class="fa-solid fa-file-arrow-down"></i> Baixar Calendário (PDF)
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Atalhos -->
-    <section style=" background: var(--cor-branco); padding: 30px;  box-shadow: 40px 0px 60px rgba(0,0,0,0.05);;">
-       
-        <div class="caixa">
-            <!--<div class="barras-decorativas"><span></span></div> -->
-            <div class="titulo">
-                <h2>Dicas Rápidas de TI</h2>
-                <p>Atalhos do Windows para agilizar seu dia a dia</p>
-            </div>
-        </div>
-
-        <div class="container" style="padding-top: 0px; padding-bottom: 40px;">
-
-
-            <div class="grid-atalhos">
-
-                <div class="card-atalho">
-                    <div class="teclas">
-                        <kbd>Win</kbd> <span>+</span> <kbd>Shift</kbd> <span>+</span> <kbd>S</kbd>
-                    </div>
-                    <div class="desc">
-                        <h4>Captura de Tela</h4>
-                        <p>Tira print apenas de uma parte selecionada da tela.</p>
-                    </div>
-                </div>
-
-                <div class="card-atalho">
-                    <div class="teclas">
-                        <kbd>Win</kbd> <span>+</span> <kbd>L</kbd>
-                    </div>
-                    <div class="desc">
-                        <h4>Bloquear Tela</h4>
-                        <p>Vai sair da sala? Bloqueie o PC instantaneamente.</p>
-                    </div>
-                </div>
-
-                <div class="card-atalho">
-                    <div class="teclas">
-                        <kbd>Win</kbd> <span>+</span> <kbd>D</kbd>
-                    </div>
-                    <div class="desc">
-                        <h4>Área de Trabalho</h4>
-                        <p>Minimiza tudo e mostra a área de trabalho.</p>
-                    </div>
-                </div>
-
-                <div class="card-atalho">
-                    <div class="teclas">
-                        <kbd>Ctrl</kbd> <span>+</span> <kbd>Shift</kbd> <span>+</span> <kbd>T</kbd>
-                    </div>
-                    <div class="desc">
-                        <h4>Reabrir Aba</h4>
-                        <p>Fechou uma aba sem querer no navegador? Isso recupera.</p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    
-    <!-- Divisão -->
+    <!-- Dicas de TI e Calendário -->
     <section class="fundo">
         <div class="container">
-            <div class="caixa">
-                <div class="barras-decorativas">
-                    <span></span>
+            <div class="dashboard-duplo">
+                
+                <div class="dashboard-col">
+                    <div class="caixa" style="margin-bottom: 20px;">
+                        <div class="titulo" style="align-items: center; text-align: left;">
+                            <h2><i class="fa-regular fa-calendar-days" style="color: var(--cor-1);"></i> Calendário 2026</h2>
+                            <p>Clique na imagem para ampliar e ler com detalhes.</p>
+                        </div>
+                    </div>
                     
+                    <div class="moldura" style="padding: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+                        <img src="Imagens/Calendário Escolar - 2026.png" alt="Calendário Escolar 2026" style="cursor: zoom-in;" onclick="abrirZoom(this.src)">
+
+                        <div class="area-download" style="margin-top: 15px;">
+                            <a href="Imagens/Calendário Escolar - 2026.pdf" download="Calendario_Escolar_2026.pdf" class="btn-download" >
+                                <i class="fa-solid fa-file-arrow-down"></i> Baixar PDF
+                            </a>
+                        </div>
+                    </div>
                 </div>
 
+                <div class="dashboard-col">
+                        <div class="caixa" style="margin-bottom: 20px;">
+                            <div class="titulo" style="align-items: center; text-align: left;">
+                                <h2><i class="fa-solid fa-keyboard" style="color: var(--cor-1);"></i> Dicas de TI</h2>
+                                <p>Atalhos do Windows para agilizar o dia a dia.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="lista-atalhos">
+                            
+                            <div class="linha-atalho">
+                                <div class="teclas"><kbd>Win</kbd> + <kbd>Shift</kbd> + <kbd>S</kbd></div>
+                                <div class="desc"><strong>Captura:</strong> Tira print de uma área da tela.</div>
+                            </div>
+                            
+                            <div class="linha-atalho">
+                                <div class="teclas"><kbd>Win</kbd> + <kbd>L</kbd></div>
+                                <div class="desc"><strong>Bloquear:</strong> Protege o PC instantaneamente.</div>
+                            </div>
+                            
+                            <div class="linha-atalho">
+                                <div class="teclas"><kbd>Win</kbd> + <kbd>D</kbd></div>
+                                <div class="desc"><strong>Minimizar:</strong> Oculta tudo e vai para a Área de Trabalho.</div>
+                            </div>
+                            
+                            <div class="linha-atalho">
+                                <div class="teclas"><kbd>Win</kbd> + <kbd>E</kbd></div>
+                                <div class="desc"><strong>Arquivos:</strong> Abre o Explorador de Arquivos.</div>
+                            </div>
+
+                            <div class="linha-atalho">
+                                <div class="teclas"><kbd>Win</kbd> + <kbd>.</kbd></div>
+                                <div class="desc"><strong>Área de Emojis:</strong> Abre o painel de emojis.</div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+            </div>
+        </div>
+
+        <div id="modalZoom" class="modal-zoom" onclick="fecharZoom()">
+        <div class="fechar-zoom"><i class="fa-solid fa-xmark"></i></div>
+        <img class="modal-conteudo" id="imgZoom">
+        </div>
+        
+    </section>
+
+    <!-- Programas -->
+    <section style="background: var(--cor-branco); padding: 40px 0; margin-top: 80px;">
+        <div class="container" style="padding-top: 0; padding-bottom: 0;">
+            <div class="caixa">
                 <div class="titulo">
-                    <h1>Tutoriais e Manuais</h1>
+                    <h2 style="color: var(--cor-1); ">Sistemas e Programas</h2>
+                    <p>Acesse rapidamente as plataformas essenciais.</p>
                 </div>
+            </div>
+
+            <div class="sistemas-grid">
+                <a href="https://votuporanga.1doc.com.br/" target="_blank" class="card-sistema">
+                    <i class="fa-solid fa-file-signature"></i>
+                    <h4>1Doc</h4>
+                    <span>Abertura de Chamados</span>
+                </a>
+                <a href="#" target="_blank" class="card-sistema">
+                    <i class="fa-solid fa-cloud"></i>
+                    <h4>Betha Sistemas</h4>
+                    <span>Diário e Notas Online</span>
+                </a>
+                <a href="https://mail.google.com" target="_blank" class="card-sistema">
+                    <i class="fa-solid fa-envelope-open-text"></i>
+                    <h4>Webmail</h4>
+                    <span>E-mail Institucional</span>
+                </a>
+                <a href="https://anydesk.com/pt/downloads/windows" target="_blank" class="card-sistema">
+                    <i class="fa-solid fa-headset"></i>
+                    <h4>AnyDesk</h4>
+                    <span>Suporte Remoto TI</span>
+                </a>
+                
             </div>
         </div>
     </section>
+
+<!-- <div class="divisor-icone">
+    <span><i class="fa-solid fa-link"></i></span>
+    </div>-->
+
+    <!-- Titulo Manuais -->
+    <div class="titulo-moderno icone-foco" style="margin-top: 40px;">
+        <div class="icone-circulo"><i class="fa-solid fa-book-open"></i></div>
+        <h2>Tutoriais e Manuais</h2>
+        <p>Aprenda a configurar e resolver problemas no dia a dia.</p>
+    </div>
 
     <!-- Tutorias / Manuais -->
     <section id="manuais" class="docs-section">
@@ -779,12 +797,13 @@
                     </div>
                 </div>
 
-                <div style="text-align: center; margin: 20px 0;padding: 20px;">
-                    <video controls style="width: auto;max-width: 100%; max-height: 500px;; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); border: 1px solid #e2e8f0;">
+                <div class="video-moldura">
+                    <div class="video-titulo">
+                        <i class="fa-solid fa-play-circle"></i> Vídeo: Emitindo o Relatório
+                    </div>
+                    <video controls class="video-player">
                         <source src="Manuais/Impressoras/HP 432/Contador/Tutorial Contador de Páginas.mp4" type="video/mp4">
-                        <p>Seu navegador não suporta a reprodução deste vídeo. 
-                        <a href="Manuais/Impressoras/HP 432/Contador/Tutorial Contador de Páginas.mp4" download>Clique aqui para baixar o vídeo.</a>
-                        </p>
+                        <p>Seu navegador não suporta vídeos. <a href="Manuais/Impressoras/HP 432/Contador/Tutorial Contador de Páginas.mp4" download>Baixe o vídeo aqui.</a></p>
                     </video>
                 </div>
                 </div>
@@ -1095,8 +1114,8 @@
                         <p>Acessando a aba <strong>Vídeos</strong>, você poderá visualizar todas as gravações baixadas. Utilizando os ícones localizados abaixo de cada arquivo, é possível realizar as seguintes ações:</p>
                         <ul style="margin-left: 20px; color: #475569; line-height: 1.8; margin-bottom: 15px;">
                             <li><i class="fa-solid fa-pen" style="color: #94a3b8; width: 20px;"></i> <strong>Renomear:</strong> Altera o nome do arquivo para facilitar a identificação.</li>
-                            <li><i class="fa-solid fa-file-export" style="color: #94a3b8; width: 20px;"></i> <strong>Exportar:</strong> Salva a gravação em outra pasta do seu computador (Área de Trabalho, Pen Drive, etc).</li>
-                            <li><i class="fa-solid fa-folder-open" style="color: #94a3b8; width: 20px;"></i> <strong>Abrir local:</strong> Abre a pasta do sistema onde o arquivo original está guardado.</li>
+                            <li><i class="fa-solid fa-file-export" style="color: #94a3b8; width: 20px;"></i> <strong>Exportar:</strong> Salva a gravação no seu computador (Área de Trabalho, Pen Drive).</li>
+                            <li><i class="fa-solid fa-folder-open" style="color: #94a3b8; width: 20px;"></i> <strong>Abrir local:</strong> Abre a pasta original do sistema.</li>
                         </ul>
                         <img src="Manuais/Câmeras/Gravação/7.png" class="step-img">
 
@@ -1422,9 +1441,7 @@
             
     </div>
     </section>
-
-
-    
+   
     <!-- Rodapé -->
     <div id="componente-footer"></div>
     

@@ -240,3 +240,19 @@ function acessarPeloCard(evt, idConteudo) {
         secaoManuais.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
 }
+
+/* --- ZOOM NA IMAGEM (CALENDÁRIO EM TELA CHEIA) --- */
+function abrirZoom(src) {
+    let modal = document.getElementById("modalZoom");
+    let imgModal = document.getElementById("imgZoom");
+    
+    modal.style.display = "flex";
+    imgModal.src = src;
+    
+    document.body.style.overflow = "hidden";
+}
+
+function fecharZoom() {
+    document.getElementById("modalZoom").style.display = "none";
+    document.body.style.overflow = "auto";
+}
