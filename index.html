@@ -18,9 +18,15 @@
 
     <!-- Inicio / Capa -->
     <section class="hero">
-        <div class="hero-container">
-            <h1><i class="fa-solid fa-globe"></i> Central de Suporte Tecnológico</h1>
-            <p>Acesso rápido a manuais, ramais telefônicos e sistemas da rede municipal de ensino.</p>
+        <div class="hero-container">    
+            <div class="badge-2">Central de Suporte Tecnológico</div>
+            <h1> Tecnologia a serviço </h1>
+            <h1 class="texto-degrade"> da Educação </h1>
+            <p>Acesse manuais, ramais telefônicos e sistemas da rede municipal de ensino de forma rápida e sem complicação.</p>
+        </div>
+        <div class="scroll-hint" id="scrollIndicator" onclick="voltarAoTopo()" style="cursor: pointer;">
+            <div class="scroll-wheel"></div>
+            <span id="scrollText">Rolar</span>
         </div>
     </section>
 
@@ -37,7 +43,7 @@
             <h2><i class="fa-solid fa-video"></i> Câmeras</h3>
             
             <p>Como visualizar imagens ao vivo e exportar gravações no SIM Next.</p>
-            <a href="#manuais" onclick="acessarPeloCard(event, 'simnext')">Acessar Guia </a>
+            <a href="#manuais" onclick="acessarPeloCard(event, 'visualizar')">Acessar Guia </a>
         </div>
 
         <div class="card">
@@ -49,9 +55,10 @@
 
     </div>
 
+    
+
     <!-- Titulo Ramais -->
     <section class="fundo">
-        
         <div class="caixa">
 
             <div class="titulo-moderno icone-foco">
@@ -71,8 +78,9 @@
         </div>
     </section>   
 
+
     <!-- Ramais -->
-    <section class="fundo">
+    <section id="ramais" class="fundo">
         <div class="container">
         <div class="caixa">
         <!-- Barra de Categoria -->
@@ -509,7 +517,7 @@
     </div>
 
     <!-- Dicas de TI e Calendário -->
-    <section class="fundo">
+    <section id="ferramentas" class="fundo">
         <div class="container">
             <div class="dashboard-duplo">
                 
@@ -586,7 +594,7 @@
         <div class="container" style="padding-top: 0; padding-bottom: 0;">
             <div class="caixa">
                 <div class="titulo">
-                    <h2 style="color: var(--cor-1); ">Sistemas e Programas</h2>
+                    <h2 style="color: var(--cor-1); text-shadow: 2px 2px 4px rgba(46, 163, 184, 0.295); ">Sistemas e Programas</h2>
                     <p>Acesse rapidamente e a baixe plataformas / programas essenciais.</p>
                 </div>
             </div>
@@ -624,7 +632,7 @@
     </div>-->
 
     <!-- Titulo Manuais -->
-    <div class="titulo-moderno icone-foco" style="margin-top: 40px;">
+    <div id="tutoriais" class="titulo-moderno icone-foco" style="margin-top: 40px;">
         <div class="icone-circulo"><i class="fa-solid fa-book-open"></i></div>
         <h2>Tutoriais e Manuais</h2>
         <p>Aprenda a configurar e resolver problemas no dia a dia.</p>

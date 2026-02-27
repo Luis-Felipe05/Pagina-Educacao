@@ -115,7 +115,7 @@ header{
             width: 45px;
             height: 45px;
             border-radius: 50%;
-            display: flex;
+            display: none;
             align-items: center;
             justify-content: center;
             cursor: pointer;
@@ -131,9 +131,9 @@ header{
 .hero {
     height: 90vh;
     margin-top: -100px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(Imagens/Capa.png);
-    background-size: cover;
-    background-position: bottom;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.384), rgba(0, 0, 0, 0.671)), url(Imagens/capa.png);
+    background-size: cover; 
+    background-position: 50 ;
     background-repeat: no-repeat;
     background-attachment: fixed;
     display: flex;
@@ -157,10 +157,135 @@ header{
 
 .hero-container h1{
     font-size: 3.5rem;
-    margin-bottom: 10px;
     font-weight: 700;
 }
 
+.badge-2 {
+    display: flex;                  
+    width: fit-content;              
+    margin: 0 auto 1.75rem auto;     
+    align-items: center;
+    gap: .5rem; 
+    padding: .35rem .9rem; 
+    border: 1px solid rgba(14, 170, 198, 0.4); 
+    background: rgba(14, 170, 198, 0.1);       
+    border-radius: 99px;
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: #e0f2fe; 
+    animation: badgeAparecer 0.7s 0.2s ease both;
+}
+
+
+.badge-2::before {
+    content: '';
+    width: 6px; 
+    height: 6px;
+    border-radius: 50%;
+    background: #0eaac6; 
+    box-shadow: 0 0 8px #0eaac6;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.4; transform: scale(0.8); }
+}
+
+   
+.texto-degrade {
+    background: linear-gradient(90deg, #004aad 0%, #00c4e8 100%);
+    
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: none; 
+    filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.4));
+    
+    font-size: 1.1em; 
+}
+
+.scroll-hint {
+    position: fixed;
+    bottom: 1rem; 
+    left: 95%;
+    top: 78%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
+    color:#0eaac6;
+    font-size: .75rem;
+    font-weight: 700;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    z-index: 1;
+    animation: fadeUp 1s 1.2s ease both;
+}
+
+.scroll-wheel {
+    width: 24px; 
+    height: 38px;
+    border: 2px solid #0eaac6;
+    border-radius: 12px;
+    position: relative;
+}
+
+.scroll-wheel::after {
+    content: '';
+    position: absolute;
+    top: 6px; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px; 
+    height: 8px;
+    background: #0eaac6; 
+    border-radius: 2px;
+    animation: scrollDot 1.8s infinite; 
+}
+
+/* Quando estiver no modo subir, o mouse gira e a bolinha para de descer */
+.scroll-hint.modo-subir .scroll-wheel {
+    transform: rotate(180deg);
+    border-color: #0eaac6; /* */
+}
+
+.scroll-hint.modo-subir .scroll-wheel::after {
+    animation: none; /* Para a animação de descer */
+    top: auto;
+    bottom: 6px; /* A bolinha fica parada na parte de cima (que agora é o topo do mouse virado) */
+}
+
+.scroll-hint:hover {
+    color: #0eaac6; /* */
+    filter: drop-shadow(0px 0px 8px rgba(20, 112, 155, 0.781));
+}
+
+@keyframes fadeUp {
+    from { 
+        opacity: 0; 
+        transform: translate(-50%, 20px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translate(-50%, 0); 
+    }
+}
+
+/* 2. Animação da bolinha do mouse descendo infinitamente */
+@keyframes scrollDot {
+    0% { 
+        transform: translate(-50%, 0); 
+        opacity: 1; 
+    }
+    100% { 
+        transform: translate(-50%, 15px); 
+        opacity: 0; 
+    }
+}
 
 /* === Caixas sobre a Capa === */
 
@@ -348,6 +473,7 @@ header{
     font-weight: 800;
     line-height: 1.1;
     margin-bottom: 5px;
+    
 }
 
 .titulo h2 {
@@ -1308,3 +1434,184 @@ footer#inicio { background: linear-gradient(90deg,#004aad 0%, #0eaac6 100%);  }
     color: var(--cor-branco);         
     background-color: var(--cor-1);
 }
+
+
+/* ==================================================
+   📱 RESPONSIVIDADE (TABLETS E CELULARES)
+   ================================================== */
+
+/* --- TABLETS E TELAS MÉDIAS (até 992px) --- */
+@media (max-width: 992px) {
+    /* 1. Capa e Cartões */
+    .hero-container h1 { font-size: 2.8rem; }
+    
+    .card-area {
+        flex-wrap: wrap; 
+        margin-top: -60px; 
+    }
+    .card {
+        min-width: 280px; 
+        margin-bottom: 20px;
+    }
+    .card a {
+        margin: 0 auto;
+    }
+
+    /* 2. Menu de Tutoriais / Base de Conhecimento */
+    .docs-container {
+        grid-template-columns: 1fr; 
+        gap: 20px;
+    }
+    .sidebar-nav {
+        position: relative; 
+        top: 0;
+        margin-bottom: 10px;
+    }
+}
+
+/* --- CELULARES (até 768px) --- */
+@media (max-width: 768px) {
+    
+   /* --- CABEÇALHO RESPONSIVO (CORRIGIDO) --- */
+    header {
+        padding: 10px 15px !important; 
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%; 
+        /* REMOVIDO o 'overflow: hidden' para deixar o menu cair! */
+    }
+    
+    .logo-area {
+        gap: 8px; 
+        display: flex;
+        align-items: center;
+        max-width: 85%; /* Dá 15% de espaço para o botão do menu respirar */
+    }
+    
+    .logo-img {
+        height: 40px !important; 
+        width: auto !important;
+        flex-shrink: 0; /* A bolinha do logo nunca encolhe */
+    }
+    
+    .logo-tex {
+        height: auto !important;
+        max-height: 40px !important; 
+        max-width: 100% !important; /* Força a imagem do texto a encolher horizontalmente */
+        object-fit: contain;
+        flex-shrink: 1; /* Permite que a imagem do texto seja esmagada se necessário */
+    }
+
+    .hero { height: auto; padding: 120px 20px 80px; margin-top: -70px; }
+    .hero-container h1 { font-size: 2.2rem; }
+    .titulo-moderno.icone-foco h2 { font-size: 1.6rem; }
+    
+    /* 2. Barra de Pesquisa e Abas (Ramais) */
+    .search-box { padding: 0 15px; }
+    .barra {
+        width: 100%;
+        gap: 8px;
+        padding: 8px;
+        flex-wrap: wrap;     
+        border-radius: 15px; 
+    }
+
+    .barra-btn {
+        flex: 1 1 45%;       
+        padding: 10px 5px;
+        font-size: 0.85rem;
+        border-radius: 10px; 
+    }
+
+    /* 3. Cabeçalho dos Manuais (Imagem da impressora e Título) */
+    .header-tutorial {
+        flex-direction: column; 
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+    .titulo-e-botao {
+        justify-content: center; 
+    }
+    .badge-container {
+        justify-content: center !important; 
+    }
+
+    /* 4. Passos do Tutorial */
+    .step {
+        flex-direction: column; 
+        gap: 15px;
+    }
+  
+    .step:not(:last-child)::after {
+        left: 19px;
+        top: 40px;
+    }
+    /* --- MENU HAMBÚRGUER (CELULAR) --- */
+    .menu-btn {
+        display: flex !important; /* Mostra o botão no celular */
+        flex-shrink: 0;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 100%; /* Cola exatamente embaixo do cabeçalho */
+        left: 0;
+        width: 100%;
+        background: linear-gradient(90deg, #004aad 0%, #0eaac6 100%);
+        flex-direction: column;
+        padding: 0;
+        gap: 0;
+        
+        /* Efeito de esconder rolando para cima */
+        max-height: 0; 
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+        box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+    }
+
+    /* Essa classe será adicionada pelo JavaScript ao clicar */
+    .nav-links.ativo {
+        max-height: 300px; /* Abre o menu */
+    }
+
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+        border-top: 1px solid rgba(255, 255, 255, 0.1); /* Linha sutil separando os links */
+    }
+
+    .nav-links li a {
+        display: block;
+        padding: 15px 0;
+    }
+    /* --- SCROLL HINT / VOLTAR AO TOPO (CELULAR - CORRIGIDO) --- */
+    .scroll-hint {
+        left: auto; /* Remove a centralização */
+        right: 25px; /* Joga para o canto direito */
+        bottom: 20px; /* Distância do fundo */
+        transform: none; /* Remove o alinhamento antigo */
+        
+        /* 1. REMOVE O FUNDO BRANCO */
+        background-color: transparent !important; /* */
+        box-shadow: none !important; /* Remove a sombra da caixa antiga */
+        
+        /* 2. ADICIONA O BRILHO AZUL (GLOW) NO MOUSE */
+        filter: drop-shadow(0px 0px 10px rgba(14, 170, 198, 0.6)); /* */
+    }
+
+    /* Esconde as palavras "Rolar" e "Subir" para economizar espaço */
+    .scroll-hint span {
+        display: none; 
+    }
+
+    /* Dá uma leve diminuída no ícone do mouse */
+    .scroll-wheel {
+        width: 20px;
+        height: 32px;
+        background: transparent !important; /* */
+        border-color: #0eaac6; /* Garante que a borda é azul */
+    }
+}
+

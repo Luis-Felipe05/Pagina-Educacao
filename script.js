@@ -21,17 +21,20 @@ function gerarCabecalho() {
     localHeader.innerHTML = `
         <header id="${idHeader}">
             <div class="logo-area">
-                <img src="Imagens/logo.png" class="logo-img" alt="Logo">
-                <img src="Imagens/Logotipo texto.png" class="logo-tex" alt="TI Dicas">
+                <img src="Imagens/logotipo.png" class="logo-img" alt="Logo">
+                <img src="Imagens/logotipo texto.png" class="logo-tex" alt="TI Dicas">
             </div>
 
-            <ul class="nav-links">
-                <li><a href="index.html">Início</a></li>
-                
+            <ul class="nav-links" id="navMenu">
                 <li><a href="#ramais">Ramais</a></li>
                 <li><a href="#manuais">Manuais</a></li>
                 <li><a href="#ferramentas">Calendário</a></li>
+                <li><a href="#tutoriais">Tutoriais </a></li>
             </ul>
+
+            <div class="menu-btn" onclick="toggleMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
         </header>
     `;
 }
@@ -42,10 +45,6 @@ function gerarRodape() {
 
     const bodyClass = document.body.classList[0];
     let idFooter = "inicio";
-    
-    if (bodyClass === 'tema-professor') idFooter = "professor";
-    if (bodyClass === 'tema-gestor')    idFooter = "gestor";
-    if (bodyClass === 'tema-betha')     idFooter = "betha";
 
     const anoAtual = new Date().getFullYear();
 
@@ -255,4 +254,49 @@ function abrirZoom(src) {
 function fecharZoom() {
     document.getElementById("modalZoom").style.display = "none";
     document.body.style.overflow = "auto";
+}
+
+/* --- TOGGLE DO MENU MOBILE --- */
+function toggleMenu() {
+    var menu = document.getElementById("navMenu");
+    // Alterna a classe 'ativo', fazendo o menu descer ou subir
+    menu.classList.toggle("ativo");
+}
+
+// Bônus de UX: Fecha o menu automaticamente quando a pessoa clica em um link!
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+        document.getElementById("navMenu").classList.remove("ativo");
+    });
+});
+
+window.onscroll = function() {
+    let hint = document.getElementById('scrollIndicator');
+    let text = document.getElementById('scrollText');
+    let wheel = document.querySelector('.scroll-wheel');
+
+    if (!hint) return;
+
+    // Se o usuário desceu mais de 300px da tela
+    if (window.scrollY > 300) {
+        text.innerText = "Subir";
+        hint.classList.add('modo-subir');
+    } else {
+        text.innerText = "Rolar";
+        hint.classList.remove('modo-subir');
+    }
+
+    // Esconde ao chegar no final da página para não bater no footer
+    if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 50) {
+        hint.style.opacity = "0";
+    } else {
+        hint.style.opacity = "1";
+    }
+};
+
+function voltarAoTopo() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth' // Rola suavemente até o topo
+    });
 }
