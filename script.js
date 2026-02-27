@@ -22,7 +22,7 @@ function gerarCabecalho() {
         <header id="${idHeader}">
             <div class="logo-area">
                 <img src="Imagens/logotipo.png" class="logo-img" alt="Logo">
-                <img src="Imagens/logotipo texto.png" class="logo-tex" alt="TI Dicas">
+                <img src="Imagens/logotipotexto.png" class="logo-tex" alt="TI Dicas">
             </div>
 
             <ul class="nav-links" id="navMenu">
