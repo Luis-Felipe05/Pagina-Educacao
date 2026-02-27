@@ -1613,5 +1613,18 @@ footer#inicio { background: linear-gradient(90deg,#004aad 0%, #0eaac6 100%);  }
         background: transparent !important; /* */
         border-color: #0eaac6; /* Garante que a borda é azul */
     }
+
+    /* --- PASSOS DO TUTORIAL (CELULAR) --- */
+    
+    /* 1. Esconde a linha conectora completamente no mobile */
+    .step:not(:last-child)::after {
+        display: none !important; 
+    }
+
+    /* 2. Como não tem mais linha, podemos diminuir o recuo esquerdo 
+          para o texto ganhar mais espaço na tela do celular! */
+    .step {
+        padding-left: 45px; /* Reduz de 60px para 45px apenas no celular */
+    }
 }
 
