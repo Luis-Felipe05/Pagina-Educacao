@@ -131,7 +131,7 @@ header{
 .hero {
     height: 90vh;
     margin-top: -100px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.384), rgba(0, 0, 0, 0.671)), url(Imagens/capa1.png);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.384), rgba(0, 0, 0, 0.671)), url(Imagens/capa.png);
     background-size: cover; 
     background-position: 50 ;
     background-repeat: no-repeat;
