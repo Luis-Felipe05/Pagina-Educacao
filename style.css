@@ -185,7 +185,7 @@ header{
     border-radius: 12px;
     box-shadow: 0 15px 30px rgba(0,0,0,0.3);
     text-align: left;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease; 
 
     border-bottom: 4px solid transparent;
 
@@ -197,7 +197,7 @@ header{
 }
 
 .card:hover {
-    transform: translateY(-10px);
+    transform: scale(1.05);
 }
 
 .icon-box {
@@ -238,7 +238,7 @@ header{
     background-color: var(--cor-1);
     color: white;
     box-shadow: 0 4px 10px rgba(37, 99, 235, 0.3);
-    transform: translateX(5px); 
+    transform: scale(1.05); 
 }
 
 
@@ -1284,7 +1284,7 @@ footer#inicio { background: linear-gradient(90deg,#004aad 0%, #0eaac6 100%);  }
     justify-content: center;
     width: 65px;
     height: 65px;
-    background-color: #eff6ff; /* Fundo azul bem claro */
+    background-color: var(--cor-branco); /* Fundo azul bem claro */
     color: var(--cor-1);       /* Ícone azul escuro */
     font-size: 1.8rem;
     border-radius: 50%;

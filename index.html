@@ -27,24 +27,24 @@
     <div class="card-area">
     
         <div class="card"> 
-            <h2><i class="fa-solid fa-chalkboard-user" ></i> Impressora</h3>
-            <p>• Guia de Impressoras</p>
-            <a href="#manuais" onclick="acessarPeloCard(event, 'hp-432')">Acessar Guia </a>
+            <h2><i class="fa-solid fa-print" ></i> Impressora</h3>
+            <p>Instalação, configuração na rede e emissão de contador de páginas</p>
+            <a href="#manuais" onclick="acessarPeloCard(event, 'hp-432')">Ver Manuais </a>
         </div>
 
         <div class="card">
             
-            <h2><i class="fa-solid fa-briefcase"></i> Câmeras</h3>
+            <h2><i class="fa-solid fa-video"></i> Câmeras</h3>
             
-            <p>• Câmeras</p>
+            <p>Como visualizar imagens ao vivo e exportar gravações no SIM Next.</p>
             <a href="#manuais" onclick="acessarPeloCard(event, 'simnext')">Acessar Guia </a>
         </div>
 
         <div class="card">
-            <h2><i class="fa-solid fa-list-check"></i> 1Doc</h3>
-            <p>• Tutoriais do Sistema</p>
+            <h2><i class="fa-solid fa-headset"></i> 1Doc</h3>
+            <p>Passo a passo para solicitar manutenção de TI e refil de toner.</p>
             
-            <a href="#manuais" onclick="acessarPeloCard(event, 'refiltinta')">Acessar Guia </a>
+            <a href="#manuais" onclick="acessarPeloCard(event, 'refiltinta')">Ver Tutoriais </a>
         </div>
 
     </div>
@@ -582,12 +582,12 @@
     </section>
 
     <!-- Programas -->
-    <section style="background: var(--cor-branco); padding: 40px 0; margin-top: 80px;">
+    <section style="background: var(--cor-branco); padding: 40px 0 50px; margin: 80px 0px; box-shadow: 0px 5px 15px rgb(195, 211, 255); ">
         <div class="container" style="padding-top: 0; padding-bottom: 0;">
             <div class="caixa">
                 <div class="titulo">
                     <h2 style="color: var(--cor-1); ">Sistemas e Programas</h2>
-                    <p>Acesse rapidamente as plataformas essenciais.</p>
+                    <p>Acesse rapidamente e a baixe plataformas / programas essenciais.</p>
                 </div>
             </div>
 
@@ -597,7 +597,7 @@
                     <h4>1Doc</h4>
                     <span>Abertura de Chamados</span>
                 </a>
-                <a href="#" target="_blank" class="card-sistema">
+                <a href="https://betha.cloud" target="_blank" class="card-sistema">
                     <i class="fa-solid fa-cloud"></i>
                     <h4>Betha Sistemas</h4>
                     <span>Diário e Notas Online</span>
@@ -607,11 +607,13 @@
                     <h4>Webmail</h4>
                     <span>E-mail Institucional</span>
                 </a>
-                <a href="https://anydesk.com/pt/downloads/windows" target="_blank" class="card-sistema">
+                <a href="/Programas/AnyDesk.zip" target="_blank" class="card-sistema">
                     <i class="fa-solid fa-headset"></i>
                     <h4>AnyDesk</h4>
                     <span>Suporte Remoto TI</span>
                 </a>
+
+                
                 
             </div>
         </div>
@@ -656,9 +658,9 @@
                 <div class="submenu">
                     <a href="#" onclick="abrirManual(event, 'refiltinta')">Refil Toner/Tinta</a>
                     <a href="#" onclick="abrirManual(event, 'manutenimp')">Manutenção. de Impressora</a>
-                    <a href="#" onclick="abrirManual(event, 'lousadigital')">Lousa Digital</a>
+                    <!--s<a href="#" onclick="abrirManual(event, 'lousadigital')">Lousa Digital</a>
                     <a href="#" onclick="abrirManual(event, 'outros')">Computador e Rede</a>
-                    <a href="#" onclick="abrirManual(event, 'equipamento')">Equipamentos</a>
+                    <a href="#" onclick="abrirManual(event, 'equipamento')">Equipamentos</a>-->
                 </div>
             </details>
         </aside>
@@ -825,7 +827,7 @@
                                 <i class="fa-solid fa-download"></i> Driver da Impressora
                             </a>
                         </div>
-                        <p>Selecione abaixo o que deseja fazer:</p>
+                        <p>Siga este guia para instalar a impressora nos computadores da escola.</p>
             
                         <div class="badge-container" style="justify-content: flex-start; margin-top: 10px;">
                             <button class="badge active" onclick="trocarAbaHP('instalacao', this)">Instalação</button>
@@ -833,6 +835,79 @@
                     </div>
 
                 </div>
+
+                <hr class="divider">
+
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Iniciar Configuração</h3>
+                        <p>Após extrair e abrir o arquivo baixado, clique no botão <strong>Iniciar configuração</strong> na tela principal.</p>
+                        <img src="Manuais/Impressoras/Canon GX4010/Instalação/1.png" class="step-img">
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Contrato e Licença</h3>
+                        <p>O instalador pedirá que você aceite os termos de uso. Marque a caixa <strong>"Concordo"</strong> na primeira opção (Obrigatório) e clique em <strong>Avançar</strong>.</p>
+                        <img src="Manuais/Impressoras/Canon GX4010/Instalação/2.png" class="step-img">
+                    </div>
+                </div>
+
+                <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Verificar Alimentação</h3>
+                            <p>Certifique-se de que a impressora já está ligada. O sistema fará uma varredura (Pesquisando impressoras). Clique em <strong>Avançar</strong>.</p>
+                            <img src="Manuais/Impressoras/Canon GX4010/Instalação/3.png" class="step-img">
+                        </div>
+                    </div>
+                    
+                <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3>Selecionar a Impressora</h3>
+                            <p>A impressora <strong>GX4000 series</strong> aparecerá na lista. Clique sobre ela para selecioná-la e depois em <strong>Avançar</strong>. Na tela seguinte, apenas confirme clicando em <strong>Continuar</strong>.</p>
+                            <img src="Manuais/Impressoras/Canon GX4010/Instalação/5.png" class="step-img">
+                            <img src="Manuais/Impressoras/Canon GX4010/Instalação/6.png" class="step-img" style="margin-top: 10px;">
+                        </div>
+                    </div>
+
+                <div class="step">
+                        <div class="step-number">5</div>
+                        <div class="alerta-box">
+                    <strong>Nota:</strong> 
+                
+                        <div class="step-content">
+                            <h3>Método de Conexão</h3>
+                            <p>Se o sistema não achar a impressora de primeira, ele mostrara essa tela. Provavelmente sua impressora não esta conectada no Wi-FI da Esolca, aba um <strong>chamado tecnico </strong> para que possamos concertar isso.</p>
+                            <img src="Manuais/Impressoras/Canon GX4010/Instalação/OB.png" class="step-img">
+                        </div>
+                        </div>
+                    </div>
+
+                <div class="step">
+                        <div class="step-number">6</div>
+                        <div class="step-content">
+                            <h3>Instalação dos Drivers</h3>
+                            <p>Agora é só aguardar. O programa fará o download e a instalação dos "MP Drivers" automaticamente. Não cancele o processo.</p>
+                            <img src="Manuais/Impressoras/Canon GX4010/Instalação/7.png" class="step-img">
+                        </div>
+                    </div>
+
+                <div class="step">
+                        <div class="step-number">7</div>
+                        <div class="step-content">
+                            <h3>Conclusão</h3>
+                            <p>Pronto! A mensagem "Agora você pode imprimir e digitalizar" vai aparecer. Você pode clicar em "Teste de impressão" se quiser garantir, e depois em <strong>Avançar</strong>.</p>
+                            <img src="Manuais/Impressoras/Canon GX4010/Instalação/8.png" class="step-img">
+                            <p style="margin-top: 15px;">Na última tela, basta clicar em <strong>Ir para o site</strong> para fechar o instalador.</p>
+                            <img src="Manuais/Impressoras/Canon GX4010/Instalação/9.png" class="step-img">
+                        </div>
+                    </div>
+
 
             </div>
 
