@@ -25,9 +25,10 @@ Este projeto nasceu da necessidade de otimizar o suporte técnico na Secretaria 
 * **JavaScript (Vanilla):** Lógica de navegação, manipulação do DOM e scroll suave (`scrollIntoView`).
 * **Font Awesome:** Biblioteca de ícones (Solid/Brands) para melhorar a comunicação visual.
 
-## 🚀 Como visualizar
-1. Clone o repositório: `git clone https://github.com/Luis-Felipe05/Pagina-Educacao.git`
-2. Abra o arquivo `index.html` no seu navegador.
+## 🌐 Acesse o Projeto
+> 👉 **[luis-felipe05.github.io/Pagina-Educacao](https://luis-felipe05.github.io/Pagina-Educacao/)**
+
+[![Ver Projeto](https://img.shields.io/badge/🌐_Ver_Projeto_Online-Live-success?style=for-the-badge)](https://luis-felipe05.github.io/Pagina-Educacao/)
 ---
 ## ✍️ Autor
 
