@@ -1626,5 +1626,30 @@ footer#inicio { background: linear-gradient(90deg,#004aad 0%, #0eaac6 100%);  }
     .step {
         padding-left: 45px; /* Reduz de 60px para 45px apenas no celular */
     }
+
+    /* 1. Recupera o espaço perdido nas laterais da caixa branca */
+    .tutorial-box {
+        padding: 25px 15px !important; /* Reduz a borda interna de 40px para apenas 15px */
+    }
+
+    /* 2. Muda o layout: Bolinha em cima, texto embaixo ocupando 100% do espaço */
+    .step {
+        padding-left: 0 !important;   /* Tira o buraco da esquerda */
+        padding-top: 45px !important; /* Cria um espaço no TOPO para a bolinha do número */
+        margin-bottom: 30px !important;
+    }
+
+    /* 3. Prega a bolinha no topo esquerdo da etapa */
+    .step-number {
+        top: 0 !important;
+        left: 0 !important;
+    }
+    
+    /* 4. Garante que as imagens não vão estourar ou esmagar */
+    .step-img {
+        max-width: 100% !important;
+        height: auto !important;
+        margin-top: 15px !important;
+    }
 }
 
