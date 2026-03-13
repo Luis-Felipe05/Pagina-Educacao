@@ -1759,3 +1759,122 @@ footer#inicio {
         padding: 22px 14px !important;
     }
 }
+
+
+/* === GRID DE DRIVERS — OUTRAS IMPRESSORAS === */
+.driver-ini-box {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: white;
+    flex-shrink: 0;
+}
+.ib-all { background: linear-gradient(135deg, #004aad, #0EA5E9); font-size: 1.2rem; }
+.ib-b   { background: linear-gradient(135deg, #4338ca, #818cf8); }
+.ib-c   { background: linear-gradient(135deg, #b91c1c, #f87171); }
+.ib-e   { background: linear-gradient(135deg, #065f46, #34d399); }
+.ib-h   { background: linear-gradient(135deg, #1d4ed8, #60a5fa); }
+ 
+/* Grupo por fabricante */
+.driver-grupo {
+    margin-top: 28px;
+}
+ 
+.driver-grupo-titulo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--cor-borda);
+}
+ 
+.driver-grupo-titulo span {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--cor-texto);
+    letter-spacing: .02em;
+}
+ 
+.driver-grupo-titulo .driver-ini-box {
+    width: 32px;
+    height: 32px;
+    font-size: 0.85rem;
+    border-radius: 7px;
+}
+ 
+/* Grid de cards dentro de cada grupo */
+.grid-drivers {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 10px;
+}
+ 
+.driver-card {
+    background: var(--cor-branco);
+    border: 1px solid var(--cor-borda);
+    border-radius: 12px;
+    padding: 16px 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    text-align: center;
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+ 
+.driver-card:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+}
+ 
+.driver-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    flex: 1;
+}
+ 
+.driver-nome {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--cor-texto);
+    line-height: 1.3;
+}
+ 
+.driver-fab {
+    font-size: 0.78rem;
+    color: var(--cor-cinza);
+    font-weight: 400;
+}
+ 
+.driver-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 16px;
+    border-radius: 99px;
+    border: 1.5px solid var(--cor-1);
+    color: var(--cor-1);
+    font-size: 0.82rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s;
+    white-space: nowrap;
+}
+ 
+.driver-btn:hover {
+    background: var(--cor-1);
+    color: white;
+}
+ 
+@media (max-width: 600px) {
+    .grid-drivers {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    }
+}

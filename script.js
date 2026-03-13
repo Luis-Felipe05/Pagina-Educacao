@@ -27,8 +27,8 @@ function gerarCabecalho() {
 
             <ul class="nav-links" id="navMenu">
                 <li><a href="#ramais">Ramais</a></li>
-                <li><a href="#manuais">Manuais</a></li>
                 <li><a href="#ferramentas">Calendário</a></li>
+                <li><a href="#programas">Programas</a></li>
                 <li><a href="#tutoriais">Tutoriais</a></li>
             </ul>
 
@@ -39,8 +39,21 @@ function gerarCabecalho() {
     `;
 
     document.querySelectorAll('.nav-links a').forEach(function (link) {
-        link.addEventListener('click', function () {
+        link.addEventListener('click', function (e) {
             document.getElementById("navMenu").classList.remove("ativo");
+
+            const href = this.getAttribute('href');
+            if (!href || !href.startsWith('#')) return;
+ 
+            const alvo = document.getElementById(href.slice(1));
+            if (!alvo) return;
+ 
+            // Scroll suave com offset do header sticky
+            e.preventDefault();
+            const alturaHeader = document.querySelector('header')?.offsetHeight || 72;
+            const posicao = alvo.getBoundingClientRect().top + window.scrollY - alturaHeader - 16;
+ 
+            window.scrollTo({ top: posicao, behavior: 'smooth' });
         });
     });
 }
@@ -80,18 +93,18 @@ function limparTexto(texto) {
    ======================================================= */
 
 function abrirTab(evt, tabName) {
-    // Esconde todas as abas
+    
     document.querySelectorAll(".tab-content").forEach(function (tab) {
         tab.classList.remove("active-content");
         tab.style.display = "none";
     });
 
-    // Remove o ativo de todos os botões
+   
     document.querySelectorAll(".barra-btn").forEach(function (btn) {
         btn.classList.remove("active");
     });
 
-    // FIX: verificação antes de usar — evita TypeError se ID não existir
+    
     const abaNova = document.getElementById(tabName);
     if (!abaNova) {
         console.warn("abrirTab: aba não encontrada ->", tabName);
@@ -105,7 +118,7 @@ function abrirTab(evt, tabName) {
         evt.currentTarget.classList.add("active");
     }
 
-    // Limpa a busca ao trocar de aba
+    
     const input = document.getElementById('searchInput');
     if (input) input.value = "";
 
@@ -128,7 +141,7 @@ function filtrarRamais() {
     const subGrupos = abaAtiva.getElementsByClassName('sub-grupo');
 
     if (subGrupos.length > 0) {
-        // Abas com sub-grupos (ex: Secretaria com vários setores)
+        
         Array.from(subGrupos).forEach(function (grupo) {
             const cards = grupo.getElementsByClassName('cards');
             let visiveisNoGrupo = 0;
@@ -146,12 +159,12 @@ function filtrarRamais() {
                 }
             });
 
-            // Esconde o grupo inteiro se nenhum card dele passou no filtro
+            
             grupo.style.display = visiveisNoGrupo === 0 ? "none" : "block";
         });
 
     } else {
-        // Abas simples sem sub-grupos (ex: CEM, CEMEI, Outros)
+        
         Array.from(abaAtiva.getElementsByClassName('cards')).forEach(function (card) {
             const searchAttr = card.getAttribute('data-search') || "";
             const textoLimpo = limparTexto(card.innerText + " " + searchAttr);
@@ -165,7 +178,6 @@ function filtrarRamais() {
         });
     }
 
-    // Atualiza o contador de resultados
     const contador = abaAtiva.querySelector('.contador');
     if (!contador) return;
 
@@ -186,20 +198,18 @@ function filtrarRamais() {
 function abrirManual(evt, idConteudo) {
     evt.preventDefault();
 
-    // Esconde todos os tutoriais
     document.querySelectorAll(".tutorial-box").forEach(function (box) {
         box.style.display = "none";
         box.classList.remove("active-tutorial");
     });
 
-    // Mostra o alvo
+
     const alvo = document.getElementById(idConteudo);
     if (alvo) {
         alvo.style.display = "block";
         alvo.classList.add("active-tutorial");
     }
 
-    // Atualiza o link ativo na sidebar
     document.querySelectorAll('.submenu a').forEach(function (link) {
         link.classList.remove('link-active');
     });
@@ -212,14 +222,12 @@ function abrirManual(evt, idConteudo) {
    ======================================================= */
 
 function trocarAbaHP(abaAlvo, botaoClicado) {
-    // FIX: busca dinamicamente todas as abas do container pai
-    // em vez de usar IDs hardcoded que quebram em outros manuais
+
     const containerBadges = botaoClicado.parentElement;
     const containerConteudo = containerBadges.closest('.tutorial-box') ||
                               containerBadges.closest('.info-container') ||
                               document.getElementById(botaoClicado.closest('[id]')?.id);
 
-    // Esconde todos os blocos de conteúdo dentro do tutorial ativo
     const tutorial = document.querySelector('.tutorial-box.active-tutorial') ||
                      document.querySelector('.tutorial-box[style*="block"]');
 
@@ -229,11 +237,11 @@ function trocarAbaHP(abaAlvo, botaoClicado) {
         });
     }
 
-    // Mostra só o alvo
+
     const alvoBloco = document.getElementById('aba-' + abaAlvo);
     if (alvoBloco) alvoBloco.style.display = 'block';
 
-    // Atualiza os badges
+
     Array.from(containerBadges.getElementsByClassName('badge')).forEach(function (btn) {
         btn.classList.remove('active');
     });
@@ -248,14 +256,13 @@ function trocarAbaHP(abaAlvo, botaoClicado) {
 function acessarPeloCard(evt, idConteudo) {
     evt.preventDefault();
 
-    // Clica no link do menu lateral correspondente
+ 
     const linkDoMenu = document.querySelector(`.submenu a[onclick*="${idConteudo}"]`);
     if (linkDoMenu) {
         linkDoMenu.click();
     }
 
-    // FIX: pequeno delay garante que o conteúdo apareça ANTES do scroll
-    // sem isso, scrollIntoView chegava antes do tutorial estar visível
+
     setTimeout(function () {
         const secaoManuais = document.getElementById('manuais') ||
                              document.querySelector('.docs-section');
@@ -288,7 +295,6 @@ function fecharZoom() {
     document.body.style.overflow = "auto";
 }
 
-// FIX: tecla Escape fecha o modal — comportamento esperado pelo usuário
 document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape') fecharZoom();
 });
