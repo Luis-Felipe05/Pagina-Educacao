@@ -1472,6 +1472,107 @@ footer#inicio {
     opacity: 0.55;
 }
 
+/* === VÍDEOS === */
+.video-moldura {
+    background: #f8fafc;
+    border: 1px solid var(--cor-borda);
+    border-radius: 12px;
+    padding: 20px;
+    margin: 28px 0;
+    text-align: center;
+}
+.video-titulo {
+    font-weight: 700;
+    font-size: 0.97rem;
+    color: #334155;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.video-titulo i { color: var(--cor-1); }
+.video-player {
+    width: auto;
+    max-width: 100%;
+    max-height: 480px;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    border: 1px solid var(--cor-borda);
+    display: block;
+    margin: 0 auto;
+}
+
+/* === CORPO TUTORIAL e BLOCO CONTEUDO === */
+.corpo-tutorial { margin-top: 16px; }
+.bloco-conteudo { animation: fadeIn 0.35s ease-in-out; }
+
+/* === STEP-IMG — altura automática, sem corte === */
+.step-img {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    border: 1px solid var(--cor-borda);
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+    margin-top: 14px;
+    display: block;
+    background-color: var(--cor-branco);
+    object-fit: contain;
+}
+
+/* === STEP-CONTENT — parágrafos sem itálico === */
+.step-content p {
+    font-size: 0.93rem;
+    color: var(--cor-cinza);
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.65;
+    margin-bottom: 6px;
+}
+.step-content h3 {
+    font-size: 1.05rem;
+    color: var(--cor-texto);
+    font-weight: 700;
+    margin-bottom: 8px;
+    margin-top: 0;
+}
+
+/* === CAIXAS DE ALERTA — variantes sem inline style === */
+.alerta-box {
+    padding: 14px 16px;
+    margin: 18px 0;
+    border-radius: 6px;
+    border-left: 4px solid #ef4444;
+    background: #fff5f5;
+    color: #b91c1c;
+    font-size: 0.92rem;
+    font-weight: 400;
+    line-height: 1.6;
+}
+.alerta-box--info {
+    border-left-color: #0ea5e9;
+    background-color: #f0f9ff;
+    color: #0369a1;
+}
+.alerta-box--sucesso {
+    border-left-color: #16a34a;
+    background-color: #f0fdf4;
+    color: #166534;
+}
+.alerta-box--aviso {
+    border-left-color: #d97706;
+    background-color: #fffbeb;
+    color: #92400e;
+}
+
+/* Sidebar: destacar grupo pai aberto */
+.sidebar-nav details[open] > summary {
+    background-color: #EFF6FF;
+    color: var(--cor-1);
+    border-radius: 6px;
+}
+
 /* === RESPONSIVIDADE === */
 
 /* Tablets (até 992px) */
