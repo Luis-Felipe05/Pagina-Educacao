@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   web:
-    image: nginx:alpine
+    image: nginx:latest
     container_name: site-ti-educacao-prod
     restart: unless-stopped
     ports:
