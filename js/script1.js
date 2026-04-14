@@ -1,78 +1,130 @@
-/* =======================================================
-   TI DICAS ESCOLA — script.js
-   Revisão v2.1 | EduDev Assistant
-   ======================================================= */
 
-
-/* =======================================================
-   1. GERENCIADOR DE LAYOUT (CABEÇALHO E RODAPÉ)
-   ======================================================= */
-
-document.addEventListener("DOMContentLoaded", function () {
-    gerarCabecalho();
-    gerarRodape();
-    filtrarRamais(); 
-});
-
-function gerarCabecalho() {
-    const localHeader = document.getElementById("componente-header");
-    if (!localHeader) return;
-
-    localHeader.innerHTML = `
-        <header id="inicio">
-            <div class="logo-area">
-                <img src="assets/images/logotipo.png" class="logo-img" alt="Logo">
-                <img src="assets/images/logotipotexto.png" class="logo-tex" alt="TI Dicas">
-            </div>
-
-            <ul class="nav-links" id="navMenu">
-                <li><a href="#ramais">Ramais</a></li>
-                <li><a href="#ferramentas">Calendário</a></li>
-                <li><a href="#programas">Programas</a></li>
-                <li><a href="#tutoriais">Tutoriais</a></li>
-            </ul>
-
-            <div class="menu-btn" onclick="toggleMenu()">
-                <i class="fa-solid fa-bars"></i>
-            </div>
-        </header>
-    `;
-
-    document.querySelectorAll('.nav-links a').forEach(function (link) {
-        link.addEventListener('click', function (e) {
-            document.getElementById("navMenu").classList.remove("ativo");
-
-            const href = this.getAttribute('href');
-            if (!href || !href.startsWith('#')) return;
+  function _iniciarBuscaHeader() {
+    const toggle  = document.getElementById('buscaToggle');
+    const input   = document.getElementById('buscaInputHeader');
+    const fechar  = document.getElementById('buscaFechar');
+    const wrapper = document.getElementById('buscaHeader');
+    if (!toggle || !input || !wrapper) return;
  
-            const alvo = document.getElementById(href.slice(1));
-            if (!alvo) return;
+    toggle.addEventListener('click', () => {
+        const aberta = wrapper.classList.toggle('busca--aberta');
+        toggle.setAttribute('aria-expanded', String(aberta));
+        if (aberta) setTimeout(() => input.focus(), 220);
+        else _limparBuscaHeader();
+    });
  
-            // Scroll suave com offset do header sticky
-            e.preventDefault();
-            const alturaHeader = document.querySelector('header')?.offsetHeight || 72;
-            const posicao = alvo.getBoundingClientRect().top + window.scrollY - alturaHeader - 16;
+    fechar?.addEventListener('click', _fecharBusca);
  
-            window.scrollTo({ top: posicao, behavior: 'smooth' });
-        });
+    input.addEventListener('input', () => {
+        const inputRamais = document.getElementById('searchInput');
+        if (inputRamais) {
+            inputRamais.value = input.value;
+            inputRamais.dispatchEvent(new Event('input'));
+        }
+ 
+        if (input.value.trim()) {
+            const secao = document.getElementById('ramais');
+            if (secao) {
+                const h = document.getElementById('cabecalho')?.offsetHeight || 72;
+                window.scrollTo({
+                    top: secao.getBoundingClientRect().top + window.scrollY - h - 16,
+                    behavior: 'smooth',
+                });
+            }
+        }
+    });
+ 
+    input.addEventListener('keydown', e => {
+        if (e.key === 'Escape') _fecharBusca();
     });
 }
-
-function gerarRodape() {
-    const localFooter = document.getElementById("componente-footer");
-    if (!localFooter) return;
-
-    const anoAtual = new Date().getFullYear();
-
-    localFooter.innerHTML = `
-        <footer id="inicio">
-            <div class="footer-content">
-                <p>&copy; ${anoAtual} TI Dicas Escola - Divisão de Suporte.</p>
-                <p class="footer-small">Desenvolvido para facilitar o dia a dia escolar.</p>
-            </div>
-        </footer>
-    `;
+ 
+function _fecharBusca() {
+    const wrapper = document.getElementById('buscaHeader');
+    const toggle  = document.getElementById('buscaToggle');
+    wrapper?.classList.remove('busca--aberta');
+    toggle?.setAttribute('aria-expanded', 'false');
+    _limparBuscaHeader();
 }
+ 
+function _limparBuscaHeader() {
+    const input = document.getElementById('buscaInputHeader');
+    if (input) input.value = '';
+    const inputRamais = document.getElementById('searchInput');
+    if (inputRamais) {
+        inputRamais.value = '';
+        inputRamais.dispatchEvent(new Event('input'));
+    }
+}
+
+    document.addEventListener("DOMContentLoaded", function () {
+        gerarCabecalho();
+        gerarRodape();
+        filtrarRamais(); 
+    });
+
+    function gerarCabecalho() {
+        const localHeader = document.getElementById("componente-header");
+        if (!localHeader) return;
+
+        localHeader.innerHTML = `
+            <header id="inicio">
+                <div class="logo-area">
+                    <img src="assets/images/logotipo.png" class="logo-img" alt="Logo">
+                    <img src="assets/images/logotipotexto.png" class="logo-tex" alt="TI Dicas">
+                </div>
+
+                <ul class="nav-links" id="navMenu">
+                    <li><a href="#ramais">Ramais</a></li>
+                    <li><a href="#ferramentas">Calendário</a></li>
+                    <li><a href="#programas">Programas</a></li>
+                    <li><a href="#tutoriais">Tutoriais</a></li>
+                </ul>
+
+                <div class="menu-btn" aria-label="Abrir menu">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </header>
+        `;
+
+        const menuBtn = localHeader.querySelector(".menu-btn");
+        if (menuBtn) menuBtn.addEventListener("click", toggleMenu);
+
+        document.querySelectorAll('.nav-links a').forEach(function (link) {
+            link.addEventListener('click', function (e) {
+                document.getElementById("navMenu").classList.remove("ativo");
+
+                const href = this.getAttribute('href');
+                if (!href || !href.startsWith('#')) return;
+    
+                const alvo = document.getElementById(href.slice(1));
+                if (!alvo) return;
+    
+                // Scroll suave com offset do header sticky
+                e.preventDefault();
+                const alturaHeader = document.querySelector('header')?.offsetHeight || 72;
+                const posicao = alvo.getBoundingClientRect().top + window.scrollY - alturaHeader - 16;
+    
+                window.scrollTo({ top: posicao, behavior: 'smooth' });
+            });
+        });
+    }
+
+    function gerarRodape() {
+        const localFooter = document.getElementById("componente-footer");
+        if (!localFooter) return;
+
+        const anoAtual = new Date().getFullYear();
+
+        localFooter.innerHTML = `
+            <footer id="inicio">
+                <div class="footer-content">
+                    <p>&copy; ${anoAtual} TI Dicas Escola - Divisão de Suporte.</p>
+                    <p class="footer-small">Desenvolvido para facilitar o dia a dia escolar.</p>
+                </div>
+            </footer>
+        `;
+    }
 
 
 /* =======================================================
@@ -298,6 +350,53 @@ function fecharZoom() {
 document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape') fecharZoom();
 });
+
+function bindUIActions() {
+    const scrollHint = document.querySelector('[data-action="voltar-topo"]');
+    if (scrollHint) scrollHint.addEventListener('click', voltarAoTopo);
+
+    document.querySelectorAll('[data-action="acessar-manual"]').forEach(function (link) {
+        link.addEventListener('click', function (event) {
+            acessarPeloCard(event, link.dataset.manualTarget);
+        });
+    });
+
+    document.querySelectorAll('[data-action="abrir-tab"]').forEach(function (btn) {
+        btn.addEventListener('click', function (event) {
+            abrirTab(event, btn.dataset.tabTarget);
+        });
+    });
+
+    document.querySelectorAll('[data-action="abrir-manual"]').forEach(function (link) {
+        link.addEventListener('click', function (event) {
+            abrirManual(event, link.dataset.manualTarget);
+        });
+    });
+
+    document.querySelectorAll('[data-action="trocar-aba-hp"]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+            trocarAbaHP(btn.dataset.abaTarget, btn);
+        });
+    });
+
+    document.querySelectorAll('[data-action="abrir-zoom"]').forEach(function (img) {
+        img.addEventListener('click', function () {
+            abrirZoom(img.src);
+        });
+    });
+
+    const modalZoom = document.getElementById('modalZoom');
+    if (modalZoom) {
+        modalZoom.addEventListener('click', function (event) {
+            if (event.target === modalZoom || event.target.closest('[data-action="fechar-zoom"]')) {
+                fecharZoom();
+            }
+        });
+    }
+
+    const searchInput = document.getElementById('searchInput');
+    if (searchInput) searchInput.addEventListener('input', filtrarRamais);
+}
 
 
 /* =======================================================

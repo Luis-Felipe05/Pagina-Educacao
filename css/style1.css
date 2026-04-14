@@ -1,80 +1,103 @@
-/* =======================================================
-   TIDICAS ESCOLA — DESIGN SYSTEM
-   Redesign v2.0 | EduDev Assistant
-   ======================================================= */
 
-/* === VARIÁVEIS GLOBAIS (sistema unificado) === */
-:root {
-    /* Paleta Principal */
-    --cor-1:        #1D4ED8;      /* Azul elétrico — ação/destaque */
-    --cor-fundo:    #F1F5F9;      /* Cinza muito claro — fundo da página */
-    --cor-branco:   #ffffff;
-    --cor-texto:    #1E293B;      /* Quase preto */
-    --cor-cinza:    #64748B;      /* Texto secundário */
-    --cor-borda:    #E2E8F0;      /* Bordas sutis */
-
-    /* Escala de Azul */
-    --azul-900:     #0A1628;      /* Marinha profundo */
-    --azul-700:     #1D4ED8;      /* = --cor-1 */
-    --azul-500:     #3B82F6;      /* Azul médio */
-    --azul-ciano:   #0EA5E9;      /* Ciano/acento luminoso */
-
-    /* Aliases (compatibilidade com código legado) */
-    --primary-blue: #0A1628;
-    --accent-blue:  #1D4ED8;
-    --light-gray:   #E2E8F0;
-    --text-dark:    #1E293B;
-    --azul-200:     #1D4ED8;
-    --azul-300:     #1e40af;
-    --azul-400:     #1e3a8a;
-
-    /* Gradiente padrão */
-    --degrade-tema: linear-gradient(90deg, #004aad 0%, #0EA5E9 100%);
-
-    /* Layout */
-    --largura-container: 1200px;
-    --header-h: 72px;
-    --raio: 12px;
-    --sombra: 0 4px 20px rgba(0, 0, 0, 0.08);
-    --sombra-alta: 0 12px 35px rgba(0, 0, 0, 0.15);
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 32px;
+    background: var(--degrade-tema);
+    border-bottom: 2px solid var(--azul-ciano);
+    transition: all 0.3s ease;
 }
 
-/* === RESET BASE === */
-/* IMPORTANTE: font-family NUNCA deve ir em *::before / *::after
-   pois sobrescreve o Font Awesome, que renderiza ícones via ::before */
-* {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-style: normal;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+header.scrolled {
+  box-shadow: 0 4px 12px rgba(255, 0, 0, 0.08);
+  padding: 8px 0;
 }
 
-/* Pseudo-elementos recebem só box-sizing — font fica com o valor herdado da lib */
-*::before, *::after {
-    box-sizing: border-box;
+header nav a {
+    margin: 0 6px;
+    text-decoration: none;
+    border-radius: 8px;
+    padding: 6px 14px;
+    color: var(--cor-branco);
+    font-weight: 500;
+    transition: 0.2s;
 }
 
-/* Tipografia correta: parágrafos são leves, não negrito */
-body {
-    background-color: var(--cor-fundo);
-    color: var(--cor-texto);
-    line-height: 1.7;
-    font-weight: 400;
+header nav a:hover {
+    background: rgba(255, 255, 255, 0.1);
 }
 
-p, li, span, td, label, .info span, .info-container p,
-.footer-small, .desc, .contador, .titulo p {
-    font-weight: 400;
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
 }
 
-h1, h2, h3, h4, h5, h6,
-.barra-btn, .number, .nav-links li a,
-.setor-titulo, .btn-download, .btn-download-header {
-    font-weight: 700;
+.logo img {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+    display: block;
 }
 
-/* === CABEÇALHO === */
+.header-busca {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 12px; 
+}
+
+.header-busca_container {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px; 
+    padding: 0 12px;
+    height: 38px;
+    transition: background 0.2s, border-color 0.2s;
+    width: 250px; 
+}
+
+.header-busca_container:focus-within {
+    background: rgba(255, 255, 255, 0.18);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+.header-busca_icone {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 0.85rem;
+    margin-right: 8px; 
+    flex-shrink: 0;
+}
+
+
+.header-busca_input {
+    border: none;
+    background: transparent;
+    color: #fff;
+    outline: none;
+    width: 100%;
+    font-size: 0.9rem;
+}
+
+.header-busca_input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* === CABEÇALHO 
 header {
     position: sticky;
     top: 0;
@@ -85,10 +108,10 @@ header {
     align-items: center;
     justify-content: space-between;
     background: linear-gradient(90deg, #003d96 0%, #0284c7 100%);
-    /* Linha luminosa no rodapé do header — sinal de identidade */
+    /* Linha luminosa no rodapé do header — sinal de identidade 
     border-bottom: 3px solid var(--azul-ciano);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
-}
+}=== 
 
 .logo-area {
     display: flex;
@@ -110,6 +133,8 @@ header {
     object-fit: contain;
     display: block;
 }
+
+*/
 
 /* Menu de Navegação */
 .nav-links {
@@ -164,7 +189,7 @@ header {
             rgba(0, 15, 40, 0.45) 0%,
             rgba(0, 15, 40, 0.72) 100%
         ),
-        url(assets/images/capa.png);
+        url(Imagens/capa.png);
     background-size: cover;
     background-position: center top;
     background-repeat: no-repeat;
