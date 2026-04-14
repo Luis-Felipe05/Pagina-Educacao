@@ -164,7 +164,7 @@ header {
             rgba(0, 15, 40, 0.45) 0%,
             rgba(0, 15, 40, 0.72) 100%
         ),
-        url(assets/images/capa.png);
+        url('../assets/images/capa.png');
     background-size: cover;
     background-position: center top;
     background-repeat: no-repeat;
