@@ -1266,8 +1266,7 @@ footer#inicio {
 }
 
 .step-images .step-img {
-    width: 48%; /* cada imagem ocupa quase metade */
-    height: auto;
+    height: 100%;
     margin: 0;
 }
 
