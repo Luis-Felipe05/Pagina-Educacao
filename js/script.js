@@ -221,31 +221,32 @@ function abrirManual(evt, idConteudo) {
    6. ABAS INTERNAS DO MANUAL (ex: HP 432)
    ======================================================= */
 
-function trocarAbaHP(abaAlvo, botaoClicado) {
+// Função Universal para trocar as abas de qualquer tutorial
+function trocarAbaTutorial(idAba, botaoClicado) {
+    // 1. Descobre qual é a caixa de tutorial "pai" do botão que foi clicado
+    const tutorialPai = botaoClicado.closest('.tutorial-box');
 
-    const containerBadges = botaoClicado.parentElement;
-    const containerConteudo = containerBadges.closest('.tutorial-box') ||
-                              containerBadges.closest('.info-container') ||
-                              document.getElementById(botaoClicado.closest('[id]')?.id);
+    // Se não encontrou um pai válido, aborta a função para evitar erros
+    if (!tutorialPai) return;
 
-    const tutorial = document.querySelector('.tutorial-box.active-tutorial') ||
-                     document.querySelector('.tutorial-box[style*="block"]');
-
-    if (tutorial) {
-        tutorial.querySelectorAll('.bloco-conteudo').forEach(function (bloco) {
-            bloco.style.display = 'none';
-        });
-    }
-
-
-    const alvoBloco = document.getElementById('aba-' + abaAlvo);
-    if (alvoBloco) alvoBloco.style.display = 'block';
-
-
-    Array.from(containerBadges.getElementsByClassName('badge')).forEach(function (btn) {
-        btn.classList.remove('active');
+    // 2. Esconde todas as abas APENAS dentro desta impressora específica
+    const abas = tutorialPai.querySelectorAll('.bloco-conteudo');
+    abas.forEach(aba => {
+        aba.style.display = 'none';
     });
-    botaoClicado.classList.add('active');
+
+    // 3. Remove a classe 'active' de todos os botões APENAS desta impressora
+    const botoes = tutorialPai.querySelectorAll('.badge');
+    botoes.forEach(botao => {
+        botao.classList.remove('active');
+    });
+
+    // 4. Mostra a aba desejada e marca o botão clicado como ativo
+    const abaSelecionada = tutorialPai.querySelector(`#${idAba}`);
+    if (abaSelecionada) {
+        abaSelecionada.style.display = 'block';
+        botaoClicado.classList.add('active');
+    }
 }
 
 
