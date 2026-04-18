@@ -1,63 +1,5 @@
-<!DOCTYPE html>
-<html lang="pt-br">
 
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site TI - Educação </title>
-    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/png">
-
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/style.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@500;600&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <script src="js/script.js" defer></script>
-    
-</head>
-
-<body class="tema-inicio">
-    <!--
-    <header>
-
-         Logo 
-        <div class="logo">
-            <img src="assets/images/logotipo.png" alt="Logo">
-            <img src="assets/images/logotipotexto.png" class="logo-tex" alt="TI Dicas">
-            
-        </div>
-
-         Menu 
-        <nav>
-            <a href="#inicio">Início</a>
-            <a href="#tutoriais">Tutoriais</a>
-            <a href="#programas">Programas</a>
-            <a href="#ramais">Ramais</a>
-        </nav>
-
-        Ações
-       <div class="header-busca">
-            <div class="header-busca_container">
-                <i class="fa-solid fa-magnifying-glass header-busca_icone" aria-hidden="true"></i>
-                <input type="text" placeholder="Buscar tutorial..." class="header-busca_input">
-            </div>
-
-        </div>
-
-         Menu Mobile 
-        <div class="menu-toggle" id="menuToggle">
-            ☰
-        </div>
-
-    </header>--> 
-    
-    <!-- CABEÇALHO  --> 
-    <div id="componente-header"></div>
+    <?php include 'components/header.php'; ?>
 
     <!-- Inicio / Capa -->
     <section class="hero">
@@ -2309,9 +2251,4 @@
     </div>
     </section>
    
-    <!-- Rodapé -->
-    <div id="componente-footer"></div>
-    
-</body>
-
-</html>
+<?php include 'components/footer.php'; ?>
