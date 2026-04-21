@@ -176,8 +176,8 @@
                 <h3>Impressão Avançada</h3>
                 <p>Se precisar mudar a bandeja, agrupar cópias ou ajustar a qualidade, clique em <strong>Imprimir utilizando a caixa de diálogo de sistema</strong> para abrir o painel avançado da HP.</p>
                 <img src="docs/impressoras/hp-432/impressão/4.png" class="step-img"style="margin-bottom: 20px;" >
-                <p>Selecione a impressora denovo e clique em <strong>Mais Configurações</strong>.</p>
                 
+                <p>Selecione a impressora denovo e clique em <strong>Mais Configurações</strong>.</p>
                 <img src="docs/impressoras/hp-432/impressão/5.png" class="step-img">
             </div>
         </div>
