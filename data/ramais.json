@@ -1,0 +1,336 @@
+{
+  "categorias": [
+    {
+      "id": "tab-secretaria",
+      "nome": "Secretaria",
+      "grupo": "Secretaria da Educação",
+      "secoes": [
+        {
+          "titulo": "Telefonista & Recepção",
+          "contatos": [
+            {
+              "busca": "Eliane",
+              "nome": "Eliane",
+              "cargo": "Telefonista",
+              "numero": "9750 / 9751"
+            },
+            {
+              "busca": "Recepção",
+              "nome": "Recepção",
+              "cargo": "",
+              "numero": "9782"
+            }
+          ]
+        },
+        {
+          "titulo": "Gabinete",
+          "contatos": [
+            {
+              "busca": "Silvia",
+              "nome": "Silvia",
+              "cargo": "Gabinete",
+              "numero": "9753"
+            },
+            {
+              "busca": "Luciana",
+              "nome": "Luciana",
+              "cargo": "Gabinete",
+              "numero": "9754"
+            },
+            {
+              "busca": "Caio",
+              "nome": "Caio",
+              "cargo": "Gabinete",
+              "numero": "9776"
+            },
+            {
+              "busca": "Meiriane",
+              "nome": "Meiriane",
+              "cargo": "Gabinete",
+              "numero": "9784"
+            },
+            {
+              "busca": "Kelly",
+              "nome": "Kelly",
+              "cargo": "Gabinete",
+              "numero": "9810"
+            },
+            {
+              "busca": "Patrícia",
+              "nome": "Patrícia",
+              "cargo": "Gabinete",
+              "numero": "9811"
+            },
+            {
+              "busca": "Lucas",
+              "nome": "Lucas",
+              "cargo": "Gabinete",
+              "numero": "9804"
+            }
+          ]
+        },
+        {
+          "titulo": "Supervisão",
+          "contatos": [
+            {
+              "busca": "Marcelo",
+              "nome": "Marcelo",
+              "cargo": "Supervisão",
+              "numero": "9757"
+            },
+            {
+              "busca": "Bete",
+              "nome": "Bete",
+              "cargo": "Supervisão",
+              "numero": "9758"
+            },
+            {
+              "busca": "Simone",
+              "nome": "Simone",
+              "cargo": "Supervisão",
+              "numero": "9759"
+            }
+          ]
+        },
+        {
+          "titulo": "Alimentação Escolar",
+          "contatos": [
+            {
+              "busca": "Jéssica",
+              "nome": "Jéssica",
+              "cargo": "Alimentação",
+              "numero": "9760"
+            },
+            {
+              "busca": "Juliana",
+              "nome": "Juliana",
+              "cargo": "Alimentação",
+              "numero": "9760"
+            },
+            {
+              "busca": "Gabriela",
+              "nome": "Gabriela",
+              "cargo": "Alimentação",
+              "numero": "9760"
+            },
+            {
+              "busca": "Ana Lúcia",
+              "nome": "Ana Lúcia",
+              "cargo": "Alimentação",
+              "numero": "9760"
+            }
+          ]
+        },
+        {
+          "titulo": "Pedagógico",
+          "contatos": [
+            {
+              "busca": "Thaty Melo",
+              "nome": "Thaty Melo",
+              "cargo": "Pedagógico",
+              "numero": "9767"
+            },
+            {
+              "busca": "Fabiana P.",
+              "nome": "Fabiana P.",
+              "cargo": "Pedagógico",
+              "numero": "9769"
+            },
+            {
+              "busca": "Fernanda",
+              "nome": "Fernanda M.",
+              "cargo": "Pedagógico",
+              "numero": "9772"
+            },
+            {
+              "busca": "Lanusse",
+              "nome": "Lanusse",
+              "cargo": "Pedagógico",
+              "numero": "9773"
+            }
+          ]
+        },
+        {
+          "titulo": "Contabilidade & Patrimônio",
+          "contatos": [
+            {
+              "busca": "Giuliano Júnior",
+              "nome": "Giuliano e Júnior",
+              "cargo": "Contabilidade",
+              "numero": "9799"
+            },
+            {
+              "busca": "Chico",
+              "nome": "Chico",
+              "cargo": "Manutenção",
+              "numero": "9795"
+            },
+            {
+              "busca": "Tatiane",
+              "nome": "Tatiane",
+              "cargo": "Manutenção",
+              "numero": "9807"
+            },
+            {
+              "busca": "Vitor",
+              "nome": "Vitor",
+              "cargo": "Patrimônio",
+              "numero": "9796"
+            }
+          ]
+        },
+        {
+          "titulo": "PAM",
+          "contatos": [
+            {
+              "busca": "Juliana Conde",
+              "nome": "Juliana Conde",
+              "cargo": "PAM",
+              "numero": "9805"
+            },
+            {
+              "busca": "Luciane",
+              "nome": "Luciane",
+              "cargo": "PAM",
+              "numero": "9805"
+            },
+            {
+              "busca": "Taiane",
+              "nome": "Taiane",
+              "cargo": "PAM",
+              "numero": "9806"
+            },
+            {
+              "busca": "Denise",
+              "nome": "Denise",
+              "cargo": "PAM",
+              "numero": "9806"
+            }
+          ]
+        },
+        {
+          "titulo": "Matrícula",
+          "contatos": [
+            {
+              "busca": "Angélica",
+              "nome": "Angélica",
+              "cargo": "Matrícula",
+              "numero": "9787"
+            },
+            {
+              "busca": "Lucimara",
+              "nome": "Lucimara",
+              "cargo": "Matrícula",
+              "numero": "9788"
+            },
+            {
+              "busca": "Soraia",
+              "nome": "Soraia",
+              "cargo": "Matrícula",
+              "numero": "9789"
+            },
+            {
+              "busca": "Karine",
+              "nome": "Karine",
+              "cargo": "Matrícula",
+              "numero": "9790"
+            }
+          ]
+        },
+        {
+          "titulo": "Recursos Humanos (RH)",
+          "contatos": [
+            {
+              "busca": "Juraci",
+              "nome": "Juraci",
+              "cargo": "RH",
+              "numero": "9791"
+            },
+            {
+              "busca": "Jennifer",
+              "nome": "Jennifer (estagiária)",
+              "cargo": "RH",
+              "numero": "9792"
+            },
+            {
+              "busca": "Jéssica",
+              "nome": "Jéssica",
+              "cargo": "RH",
+              "numero": "9793"
+            },
+            {
+              "busca": "Jayne",
+              "nome": "Jayne",
+              "cargo": "RH",
+              "numero": "9794"
+            },
+            {
+              "busca": "Henrique",
+              "nome": "Henrique",
+              "cargo": "RH",
+              "numero": "9808"
+            }
+          ]
+        },
+        {
+          "titulo": "Compras",
+          "contatos": [
+            {
+              "busca": "Estela",
+              "nome": "Estela",
+              "cargo": "Compras",
+              "numero": "9777"
+            },
+            {
+              "busca": "Yara",
+              "nome": "Yara",
+              "cargo": "Compras",
+              "numero": "9778"
+            },
+            {
+              "busca": "Jadeny Alexandre",
+              "nome": "Jadeny e Alexandre",
+              "cargo": "Compras",
+              "numero": "9779"
+            }
+          ]
+        },
+        {
+          "titulo": "Suporte TI",
+          "contatos": [
+            {
+              "busca": "Alex Gabriel Luis",
+              "nome": "Alex, Gabriel e Luis",
+              "cargo": "TI",
+              "numero": "9780"
+            },
+            {
+              "busca": "Cauê",
+              "nome": "Cauê",
+              "cargo": "Betha",
+              "numero": "9781"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tab-cem",
+      "nome": "CEM",
+      "grupo": "Escolas Municipais (CEM)",
+      "secoes": []
+    },
+    {
+      "id": "tab-emei",
+      "nome": "CEMEI/EMEI",
+      "grupo": "Educação Infantil (CEMEI / EMEI)",
+      "secoes": []
+    },
+    {
+      "id": "tab-outros",
+      "nome": "Outros",
+      "grupo": "Outros Locais",
+      "secoes": []
+    }
+  ]
+}

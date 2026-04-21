@@ -1,0 +1,60 @@
+{
+  "calendario": {
+    "titulo": "Calendário Escolar 2026",
+    "imagem": "assets/images/ferramentas/calendario-escolar-2026.png",
+    "arquivo": "assets/images/ferramentas/calendario-escolar-2026.pdf"
+  },
+  "atalhos": [
+    {
+      "teclas": "Win + Shift + S",
+      "titulo": "Captura",
+      "descricao": "Tira print de uma área da tela."
+    },
+    {
+      "teclas": "Win + L",
+      "titulo": "Bloquear",
+      "descricao": "Protege o PC instantaneamente."
+    },
+    {
+      "teclas": "Win + D",
+      "titulo": "Minimizar",
+      "descricao": "Oculta tudo e vai para a Área de Trabalho."
+    },
+    {
+      "teclas": "Win + E",
+      "titulo": "Arquivos",
+      "descricao": "Abre o Explorador de Arquivos."
+    },
+    {
+      "teclas": "Win + .",
+      "titulo": "Emojis",
+      "descricao": "Abre o painel de emojis."
+    }
+  ],
+  "programas": [
+    {
+      "nome": "1Doc",
+      "descricao": "Abertura de Chamados",
+      "url": "https://votuporanga.1doc.com.br/",
+      "icone": "fa-file-signature"
+    },
+    {
+      "nome": "Betha Sistemas",
+      "descricao": "Diário e Notas Online",
+      "url": "https://betha.cloud",
+      "icone": "fa-cloud"
+    },
+    {
+      "nome": "Elefante Letrado",
+      "descricao": "Plataforma de Leitura",
+      "url": "https://login.elefanteletrado.com.br/manager",
+      "icone": "fa-book-open-reader"
+    },
+    {
+      "nome": "AnyDesk",
+      "descricao": "Suporte Remoto TI",
+      "url": "https://download.anydesk.com/AnyDesk.exe",
+      "icone": "fa-headset"
+    }
+  ]
+}

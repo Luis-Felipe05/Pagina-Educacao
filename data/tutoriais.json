@@ -1,0 +1,72 @@
+[
+  {
+    "slug": "impressoras/hp-432",
+    "titulo": "HP Laser MFP 432",
+    "categoria": "Impressoras"
+  },
+  {
+    "slug": "impressoras/hp-e42540",
+    "titulo": "HP LaserJet MFP E42540",
+    "categoria": "Impressoras"
+  },
+  {
+    "slug": "impressoras/hp-e52645",
+    "titulo": "HP LaserJet MFP E52645",
+    "categoria": "Impressoras"
+  },
+  {
+    "slug": "impressoras/canon-gx4010",
+    "titulo": "Canon GX4010",
+    "categoria": "Impressoras"
+  },
+  {
+    "slug": "impressoras/canon-c5035",
+    "titulo": "Canon iR-ADV C5035 / C5045",
+    "categoria": "Impressoras"
+  },
+  {
+    "slug": "impressoras/epson-l3250",
+    "titulo": "Epson L3250",
+    "categoria": "Impressoras"
+  },
+  {
+    "slug": "impressoras/outras-impressoras",
+    "titulo": "Outras Impressoras",
+    "categoria": "Impressoras"
+  },
+  {
+    "slug": "cameras/visualizar",
+    "titulo": "Câmeras: Visualização ao Vivo",
+    "categoria": "Câmeras"
+  },
+  {
+    "slug": "cameras/gravacao",
+    "titulo": "Câmeras: Buscar e Exportar Gravações",
+    "categoria": "Câmeras"
+  },
+  {
+    "slug": "1doc/refil-tinta",
+    "titulo": "1Doc: Refil de Toner e Tinta",
+    "categoria": "1Doc"
+  },
+  {
+    "slug": "1doc/manutencao-impressora",
+    "titulo": "1Doc: Manutenção de Impressora",
+    "categoria": "1Doc"
+  },
+  {
+    "slug": "1doc/manutencao-computador",
+    "titulo": "1Doc: Computador e Notebooks",
+    "categoria": "1Doc"
+  },
+  {
+    "slug": "1doc/outros",
+    "titulo": "1Doc: Requisitar Equipamentos",
+    "categoria": "1Doc"
+  },
+  {
+    "slug": "1doc/equipamento",
+    "titulo": "1Doc: Visão Geral de Equipamentos",
+    "categoria": "1Doc"
+  }
+]
