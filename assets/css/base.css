@@ -20,6 +20,8 @@
     --cor-texto: #212529;
     --cor-borda: #dee2e6;
     
+    --degrade-tema: linear-gradient(90deg, #003d96 0%, #0284c7 100%);
+    
     /* Fontes */
     --fonte-principal: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     --fonte-titulo: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;

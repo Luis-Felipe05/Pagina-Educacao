@@ -7,9 +7,9 @@
     position: sticky;
     top: 0;
     z-index: 1000;
-    background-color: var(--cor-branco);
-    border-bottom: 1px solid var(--cor-borda);
-    padding: var(--espacamento-md) var(--espacamento-lg);
+    background: var(--degrade-tema);
+    border-bottom: 3px solid var(--cor-2);
+    padding: var(--espacamento-sm) var(--espacamento-lg);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -23,12 +23,12 @@
 }
 
 .header__logo-img {
-    height: 40px;
+    height: 52px;
     width: auto;
 }
 
 .header__logo-text {
-    height: 24px;
+    height: 48px;
     width: auto;
 }
 
@@ -65,7 +65,7 @@
 .hero {
     position: relative;
     background: linear-gradient(to bottom,rgba(4, 30, 76, 0.842) 0%, rgb(8, 0, 58) 100%);
-    color: var(--cor-2);
+    color: var(--cor-branco);
     padding: var(--espacamento-xxl) var(--espacamento-md);
     text-align: center;
     min-height: 90vh;
@@ -83,14 +83,40 @@
 }
 
 .hero__badge {
-    display: inline-block;
-    background-color: rgba(255, 255, 255, 0.2);
-    padding: var(--espacamento-sm) var(--espacamento-lg);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: 1px solid rgba(14, 165, 233, 0.45);
+    background-color: transparent;
+    padding: 0.4rem 1rem;
     border-radius: 50px;
     font-size: 0.875rem;
     font-weight: 500;
+    letter-spacing: 0.12em;
     margin-bottom: var(--espacamento-lg);
+    color: #bae6fd;
     backdrop-filter: blur(10px);
+    animation: badgeAparecer 0.6s 0.2s ease both;
+}
+
+.hero__badge::before {
+    content: '';
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--cor-2);
+    box-shadow: 0 0 10px var(--cor-2);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50%       { opacity: 0.4; transform: scale(0.75); }
+}
+
+@keyframes badgeAparecer {
+    from { opacity: 0; transform: translateY(-8px); }
+    to   { opacity: 1; transform: translateY(0); }
 }
 
 .hero__title {
@@ -100,7 +126,7 @@
 
 .hero__title-highlight {
     display: inline-block;
-    background: linear-gradient(120deg, #fff 0%, #c3d3ff 100%);
+    background: var(--degrade-tema);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
