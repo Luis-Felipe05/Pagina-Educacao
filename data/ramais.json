@@ -1,8 +1,10 @@
 {
   "categorias": [
+
     {
       "id": "tab-secretaria",
       "nome": "Secretaria",
+      "icone": "fa-building-columns",
       "grupo": "Secretaria da Educação",
       "secoes": [
         {
@@ -299,8 +301,14 @@
           "titulo": "Suporte TI",
           "contatos": [
             {
-              "busca": "Alex Gabriel Luis",
-              "nome": "Alex, Gabriel e Luis",
+              "busca": "Alex Gabriel",
+              "nome": "Alex e Gabriel",
+              "cargo": "TI",
+              "numero": "9780"
+            },
+            {
+              "busca": "Gustavo Luis",
+              "nome": "Gustavo e Luis",
               "cargo": "TI",
               "numero": "9780"
             },
@@ -314,21 +322,27 @@
         }
       ]
     },
+
     {
       "id": "tab-cem",
       "nome": "CEM",
+      "icone": "fa-school",
       "grupo": "Escolas Municipais (CEM)",
       "secoes": []
     },
+
     {
       "id": "tab-emei",
       "nome": "CEMEI/EMEI",
+      "icone": "fa-child-reaching",
       "grupo": "Educação Infantil (CEMEI / EMEI)",
       "secoes": []
     },
+
     {
       "id": "tab-outros",
       "nome": "Outros",
+      "icone": "fa-location-dot",
       "grupo": "Outros Locais",
       "secoes": []
     }

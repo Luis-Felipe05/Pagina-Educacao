@@ -64,15 +64,17 @@
 /* Hero Section */
 .hero {
     position: relative;
-    background: linear-gradient(135deg, #2ea3b8 0%, #1a7f92 100%);
-    color: var(--cor-branco);
+    background: linear-gradient(to bottom,rgba(4, 30, 76, 0.842) 0%, rgb(8, 0, 58) 100%);
+    color: var(--cor-2);
     padding: var(--espacamento-xxl) var(--espacamento-md);
     text-align: center;
-    min-height: 60vh;
+    min-height: 90vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    border-radius: 0 0 16px 16px;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.45);
 }
 
 .hero__container {
@@ -208,11 +210,14 @@
 
 .section-title__heading {
     color: var(--cor-1);
+    font-weight: 800;
     margin-bottom: var(--espacamento-sm);
 }
 
 .section-title__description {
     color: var(--cor-cinza);
+    font-style: italic;
+    font-weight: 400;
     margin: 0;
 }
 
