@@ -68,13 +68,14 @@
     color: var(--cor-branco);
     padding: var(--espacamento-xxl) var(--espacamento-md);
     text-align: center;
-    min-height: 90vh;
+    min-height: 82vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     border-radius: 0 0 16px 16px;
     box-shadow: 0 8px 40px rgba(0, 0, 0, 0.45);
+    
 }
 
 .hero__container {
@@ -93,7 +94,7 @@
     font-size: 0.875rem;
     font-weight: 500;
     letter-spacing: 0.12em;
-    margin-bottom: var(--espacamento-lg);
+    margin-bottom: var(--espacamento-xxl);
     color: #bae6fd;
     backdrop-filter: blur(10px);
     animation: badgeAparecer 0.6s 0.2s ease both;
@@ -120,16 +121,18 @@
 }
 
 .hero__title {
-    font-size: clamp(2rem, 5vw, 3rem);
+    font-size: clamp(2rem, 5vw, 3rem); 
     margin-bottom: var(--espacamento-lg);
 }
 
 .hero__title-highlight {
-    display: inline-block;
-    background: var(--degrade-tema);
+    display: block; 
+    background: var(--degrade-claro);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    filter: drop-shadow(0 2px 8px rgba(56, 189, 248, 0.35));
+    font-size: 1.1em;
 }
 
 .hero__description {
@@ -139,9 +142,9 @@
 }
 
 .hero__scroll-hint {
-    position: absolute;
+    position: fixed;
     bottom: var(--espacamento-xl);
-    left: 50%;
+    left: 90%;
     transform: translateX(-50%);
     display: flex;
     flex-direction: column;

@@ -328,7 +328,85 @@
       "nome": "CEM",
       "icone": "fa-school",
       "grupo": "Escolas Municipais (CEM)",
-      "secoes": []
+      "secoes": [
+        {
+          "titulo": "",
+          "contatos": [
+            {
+              "busca": "Anita",
+              "nome": "Anita",
+              "cargo": "CEM",
+              "numero": "3423-6969"
+            },
+            {
+              "busca": "Duarte",
+              "nome": "B. I. Duarte",
+              "cargo": "CEM",
+              "numero": "3423-1444 | 3422-8848"
+            },
+            {
+              "busca": "Clary",
+              "nome": "Clary",
+              "cargo": "CEM",
+              "numero": "3422-8008"
+            },
+            {
+              "busca": "Faustino",
+              "nome": "Faustino",
+              "cargo": "CEM",
+              "numero": "3421-4545 | 3422-4410"
+            },
+            {
+              "busca": "Geyner",
+              "nome": "Geyner",
+              "cargo": "CEM",
+              "numero": "3422-3541"
+            },
+            {
+              "busca": "Irma",
+              "nome": "Irma",
+              "cargo": "CEM",
+              "numero": "3421-7630"
+            },
+            {
+              "busca": "MIMO",
+              "nome": "MIMO",
+              "cargo": "CEM",
+              "numero": "3421-6686"
+            },
+            {
+              "busca": "Maria Martins",
+              "nome": "Mª Martins",
+              "cargo": "CEM",
+              "numero": "3422-3686"
+            },
+            {
+              "busca": "Pieroni",
+              "nome": "Pieroni",
+              "cargo": "CEM",
+              "numero": "3421-4090"
+            },
+            {
+              "busca": "Neyde",
+              "nome": "Neyde",
+              "cargo": "CEM",
+              "numero": "3422-3869"
+            },
+            {
+              "busca": "Valdir",
+              "nome": "Valdir",
+              "cargo": "CEM",
+              "numero": "3422-3163"
+            },
+            {
+              "busca": "Orozimbo",
+              "nome": "Orozimbo",
+              "cargo": "CEM",
+              "numero": "3421-4108"
+            }
+          ]
+        }
+      ]
     },
 
     {
@@ -336,7 +414,139 @@
       "nome": "CEMEI/EMEI",
       "icone": "fa-child-reaching",
       "grupo": "Educação Infantil (CEMEI / EMEI)",
-      "secoes": []
+      "secoes": [
+        {
+          "titulo": "",
+          "contatos": [
+            {
+              "busca": "Abílio",
+              "nome": "Abílio",
+              "cargo": "CEMEI",
+              "numero": "3423-3744"
+            },
+            {
+              "busca": "Alberto",
+              "nome": "Alberto",
+              "cargo": "EMEI",
+              "numero": "3422-8819"
+            },
+            {
+              "busca": "Amélia",
+              "nome": "Amélia",
+              "cargo": "CEMEI",
+              "numero": "3422-8876"
+            },
+            {
+              "busca": "Ana F.",
+              "nome": "Ana F.",
+              "cargo": "CEMEI",
+              "numero": "3422-8270"
+            },
+            {
+              "busca": "Aracy",
+              "nome": "Aracy",
+              "cargo": "CEMEI",
+              "numero": "3422-8446"
+            },
+            {
+              "busca": "Benedita",
+              "nome": "Benedita",
+              "cargo": "CEMEI",
+              "numero": "3423-6270"
+            },
+            {
+              "busca": "Célia",
+              "nome": "Célia",
+              "cargo": "CEMEI",
+              "numero": "3422-8876"
+            },
+            {
+              "busca": "Elza",
+              "nome": "Elza",
+              "cargo": "CEMEI",
+              "numero": "3422-3470"
+            },
+            {
+              "busca": "F. Marzochi",
+              "nome": "Floriano Marzochi",
+              "cargo": "CEMEI",
+              "numero": "3422-5383"
+            },
+            {
+              "busca": "Luiza G.",
+              "nome": "Luiza G.",
+              "cargo": "CEMEI",
+              "numero": "3423-4253"
+            },
+            {
+              "busca": "Helena B.",
+              "nome": "Helena B.",
+              "cargo": "CEMEI",
+              "numero": "3422-8098"
+            },
+            {
+              "busca": "José Modesto",
+              "nome": "J. Modesto",
+              "cargo": "CEMEI",
+              "numero": "3422-8250"
+            },
+            {
+              "busca": "Magaly",
+              "nome": "Magaly",
+              "cargo": "CEMEI",
+              "numero": "18 98169-9672"
+            },
+            {
+              "busca": "Maria Lygia",
+              "nome": "Mª Lygia",
+              "cargo": "CEMEI",
+              "numero": "3405-1244"
+            },
+            {
+              "busca": "Mercedes",
+              "nome": "Mercedes",
+              "cargo": "CEMEI",
+              "numero": "3422-8485"
+            },
+            {
+              "busca": "Orozília",
+              "nome": "Orozília",
+              "cargo": "CEMEI",
+              "numero": "3422-8061"
+            },
+            {
+              "busca": "Terezinha Guerra",
+              "nome": "Terezinha G.",
+              "cargo": "CEMEI",
+              "numero": "3423-8850"
+            },
+            {
+              "busca": "Terruel",
+              "nome": "Terruel",
+              "cargo": "CEMEI",
+              "numero": "3422-8850"
+            },
+            {
+              "busca": "Valter Peresi",
+              "nome": "V. Peresi",
+              "cargo": "CEMEI",
+              "numero": "3422-6135"
+            },
+            {
+              "busca": "Vandira",
+              "nome": "Vandira",
+              "cargo": "CEMEI",
+              "numero": "5704-9584"
+            },
+            {
+              "busca": "Vânia",
+              "nome": "Vânia",
+              "cargo": "CEMEI",
+              "numero": "3423-2730"
+            }
+          ]
+        }
+      ]
     },
 
     {
@@ -344,7 +554,31 @@
       "nome": "Outros",
       "icone": "fa-location-dot",
       "grupo": "Outros Locais",
-      "secoes": []
+      "secoes": [
+        {
+          "titulo": "",
+          "contatos": [
+            {
+              "busca": "Transporte Escolar",
+              "nome": "Transporte Escolar",
+              "cargo": "Rua Hermógenes Bruschi, 1954 - CEP 15500-006",
+              "numero": "Tel. (17) 3406-0779"
+            },            
+            {
+              "busca": "Polo UAB",
+              "nome": "Polo UAB",
+              "cargo": "Rua Pernambuco, 1736 - CEP 15501-095",
+              "numero": "Tel. (17) 3422-8839"
+            },
+            {
+              "busca": "Almoxarifado",
+              "nome": "Almoxarifado",
+              "cargo": "Rua Pernambuco, 4846 - CEP 15500-006",
+              "numero": "Tel. (17) 3422-3160"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
