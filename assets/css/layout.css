@@ -202,7 +202,8 @@
 /* Seções com fundo */
 .ramais-header,
 .ramais-section,
-.ferramentas-section {
+.ferramentas-section,
+.tutorials-section {
     background-color: var(--cor-cinza-claro);
     padding: var(--espacamento-xxl) var(--espacamento-md);
 }

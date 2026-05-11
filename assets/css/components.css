@@ -30,19 +30,60 @@ main{
     object-fit:cover
 }
 
-.cards-area{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem;margin-top:-4rem;position:relative;z-index:2;margin-bottom:4rem}
+.cards-area{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:1.5rem;
+    margin-top:-4rem;
+    position:relative;
+    z-index:2;
+    margin-bottom:4rem
+}
 
-.card,.dashboard-card,.program-card,.ramais-group,.tutorials-nav,.tutorials-content,.driver-card{background:#fff;border:1px solid rgba(15,23,42,.08);border-radius:1rem;box-shadow:0 20px 50px rgba(15,23,42,.08)}
+.card,.dashboard-card,.program-card,.ramais-group,.tutorials-nav,.tutorials-content,.driver-card{
+    background:#fff;
+    border:1px solid rgba(15,23,42,.08);
+    border-radius:1rem;
+    box-shadow:0 20px 50px rgba(15,23,42,.08)}
 
-.card{padding:1.5rem;display:flex;flex-direction:column;gap:1rem}
+.card{
+    padding:1.5rem;
+    display:flex;
+    flex-direction:column;
+    gap:1rem;
+}
 
-.card__title{font-size:1.4rem;display:flex;align-items:center;gap:.75rem;color:var(--cor-1)}
+.card__title{
+    font-size:1.4rem;
+    display:flex;
+    align-items:center;
+    gap:.75rem;
+    color:var(--cor-1);
+}
 
-.card__description{color:#475569;margin-bottom:0}
+.card__description{
+    color:#475569;
+    margin-bottom:0;
+}
 
-.card__link,.btn--primary{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;background:linear-gradient(135deg,var(--cor-1),var(--cor-2));color:#fff;padding:.85rem 1.1rem;border-radius:.8rem;font-weight:600;border:0;cursor:pointer}
+.card__link,.btn--primary{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:.5rem;
+    background:linear-gradient(135deg,var(--cor-1),var(--cor-2));
+    color:#fff;
+    padding:.85rem 1.1rem;
+    border-radius:.8rem;
+    font-weight:600;
+    border:0;
+    cursor:pointer
+}
 
-.card__link:hover,.btn--primary:hover{color:#fff;transform:translateY(-1px)}
+.card__link:hover,.btn--primary:hover{
+    color:#fff;
+    transform:translateY(-1px);
+}
 
 .search-box{
     position:relative;
@@ -139,9 +180,17 @@ main{
 
 .dashboard{display:grid;grid-template-columns:1.1fr .9fr;gap:1.5rem}
 
-.dashboard-card{padding:1.5rem}
+.dashboard-card{
+    padding:1.5rem;
+    text-align: center;
+}
 
-.dashboard-card__header h2{display:flex;align-items:center;gap:.75rem;color:var(--cor-1)}
+.dashboard-card__header h2{
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    gap:.75rem;
+    color:var(--cor-1)}
 
 .calendar-card{overflow:hidden;border-radius:1rem;margin-bottom:1rem}
 
@@ -153,15 +202,41 @@ main{
 
 .shortcut-item__keys{font-weight:700;color:var(--cor-2)}
 
-.programs-section{padding:4rem 0;background:#fff}
+.programs-section{
+    padding:4rem 0;
+    background:#fff}
 
-.programs-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
+.programs-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:1rem
+}
 
-.program-card{padding:1.4rem;display:flex;flex-direction:column;gap:.85rem}
+.program-card{
+    padding:1.4rem;
+    display:flex;
+    flex-direction:column;
+    text-align:center;
+    align-items:center;
+    gap:.85rem
+}
 
-.program-card__icon{width:3rem;height:3rem;display:inline-flex;align-items:center;justify-content:center;border-radius:.9rem;background:var(--cor-4);color:var(--cor-6);font-size:1.2rem}
+.program-card__icon{
+    width:3rem;
+    height:3rem;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:.9rem;
+    background:var(--cor-4);
+    color:var(--cor-6);
+    font-size:1.2rem
+}
 
-.program-card__link{margin-top:auto;font-weight:600}
+.program-card__link{
+    margin-top:auto;
+    font-weight:600;
+}
 
 .tutorials-layout{display:grid;grid-template-columns:minmax(250px,var(--largura-tutorial-nav)) 1fr;gap:1.5rem;align-items:start}
 
